@@ -1,5 +1,7 @@
 @import "colors";
 @import "mixins";
+@import "breakpoints";
+
 @include font-face("glyphicons", "../bower_components/assets/fonts/bootstrap/glyphicons-halflings-regular", 500, normal, eot svg ttf woff woff2);
 @include font-face(FontAwesome, "../bower_components/font-awesome/fonts/fontawesome-webfont", 500, normal, eot svg ttf woff woff2 otf);
 

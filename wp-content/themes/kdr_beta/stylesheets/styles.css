@@ -10,7 +10,7 @@
   font-weight: 500;
   src: url("../bower_components/font-awesome/fonts/fontawesome-webfont.eot?") format("eot"), url("../bower_components/font-awesome/fonts/fontawesome-webfont.svg#FontAwesome") format("svg"), url("../bower_components/font-awesome/fonts/fontawesome-webfont.ttf") format("truetype"), url("../bower_components/font-awesome/fonts/fontawesome-webfont.woff") format("woff"), url("../bower_components/font-awesome/fonts/fontawesome-webfont.woff2") format("woff2"), url("../bower_components/font-awesome/fonts/fontawesome-webfont.otf") format("opentype");
 }
-/* line 6, ../sass/styles.scss */
+/* line 8, ../sass/styles.scss */
 body {
   background-color: #e8e6e4;
 }
@@ -32,7 +32,7 @@ header .logo {
   display: inline-block;
   vertical-align: baseline;
   line-height: 60px;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 /* line 17, ../sass/_header.scss */
 header .logo:hover {
@@ -124,4 +124,23 @@ header .menu .sub-menu a:hover {
 /* line 110, ../sass/_header.scss */
 header .menu ul li:hover > a {
   background-color: #ff8f00;
+}
+@media screen and (max-width: 785px) {
+  /* line 115, ../sass/_header.scss */
+  header .logo {
+    font-size: 18px;
+  }
+  /* line 118, ../sass/_header.scss */
+  header .menu {
+    padding-right: 20px;
+  }
+  /* line 121, ../sass/_header.scss */
+  header .menu > #menu-header_menu > li > a {
+    padding: 21px 9px;
+    font-size: 15px;
+  }
+  /* line 125, ../sass/_header.scss */
+  header .menu .sub-menu {
+    width: 124px;
+  }
 }
