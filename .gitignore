@@ -1,0 +1,3 @@
+wp-config*.php
+wp-content/themes/kdr_beta/.*
+wp-content/themes/kdr_beta/config.rb
