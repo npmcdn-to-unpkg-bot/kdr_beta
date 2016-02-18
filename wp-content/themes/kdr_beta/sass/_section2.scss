@@ -1,0 +1,72 @@
+section.section2{
+	width:100%;
+	height:590px;
+	background-color:$princeton;
+	
+
+	.section-wrapper{
+		width:$section2wrapperwidth;
+		margin:0 auto;
+		display:flex;
+		padding-top:$hr_padding;
+		height: 510px;
+    padding-bottom: $hr_padding;
+	}
+
+	.worthy_consul{ order:3; margin:0 15px; }
+	.senior_tribune{ order:4; margin:50px 15px; }
+	.junior_tribune{ order:2; margin:50px 15px; }
+	.quaestor{ order:5; margin:100px 0 0 15px; height: 350px;}
+	.rush_chair{ order:1; margin:100px 15px 0 0; height: 350px;}
+
+	figure{
+		display:inline-block;
+		height:350px;
+
+		img{
+	    border: 10px solid white;
+	    border-radius: 200px;
+	    background-color: white;
+	    box-shadow: 0 5px 2px 2px rgba(74, 74, 74, 0.3);
+	    display: block;
+	    margin: 0 auto;
+	    height: 180px;
+		}
+		figcaption{
+			font-family:'open_regular_italic', sans-serif;
+			display:block;
+	    text-align: center;
+      margin-top: 25px;
+      color:white;
+      font-weight:100;
+      letter-spacing:1px;
+			
+			span{
+				display:block;
+
+				&:last-of-type{
+					margin-top:2px;
+				}
+			}
+
+			hr{
+				width:50%;
+				display:inline-block;
+		    border: 1px solid white;
+		    margin:10px 0;
+			}
+		}
+	}
+
+	.white_crest{
+		position:absolute;
+		width:$section2wrapperwidth;
+		
+		img{
+			position:relative;
+			height:150px;
+			left:490px;
+			top: 340px;
+		}
+	}
+}

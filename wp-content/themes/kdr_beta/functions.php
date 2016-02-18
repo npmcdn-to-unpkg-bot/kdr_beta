@@ -6,7 +6,6 @@
  *
  * @package kdr_beta
  */
-
 if ( ! function_exists( 'kdr_beta_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -16,6 +15,10 @@ if ( ! function_exists( 'kdr_beta_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function kdr_beta_setup() {
+	global $siteOptions;
+
+	$siteOptions['url'] = 'wp-content/themes/kdr_beta/';
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -116,8 +119,7 @@ add_action( 'widgets_init', 'kdr_beta_widgets_init' );
 function kdr_beta_scripts() {
 	wp_enqueue_style( 'hard-reset',get_template_directory_uri() . '/style.css');
 	wp_enqueue_style( 'kdr_beta-style',get_template_directory_uri() . '/stylesheets/styles.css');
-	wp_enqueue_style( 'font-awesome',get_template_directory_uri() . '/bower_components/font-awesome/css/font-awesome.min.css');
-
+	
 	wp_enqueue_script( 'kdr_beta-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'kdr_beta-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -127,6 +129,8 @@ function kdr_beta_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kdr_beta_scripts' );
+
+
 
 /**
  * Implement the Custom Header feature.
