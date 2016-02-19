@@ -28,6 +28,8 @@ $rand_num = rand(0, sizeOf($herobanner_images)-1);
 $rand_img = $herobanner_images[$rand_num]['image'];
 
 get_header('homepage'); ?>
+
+
 <div id="page" class="site">
 	<div id="content" class="site-content">
 		<section class="hero_banner">
@@ -41,39 +43,41 @@ get_header('homepage'); ?>
 			</figure>
 		</section>
 
-		<section class="section1">
-			<iframe src="<?php echo($section1_video); ?>" frameborder="0" allowfullscreen></iframe>
-			<hr class="text_divider">
-			<p class="blurb">
-				<?php echo($section1_blurb); ?>
-			</p>
-			<hr class="text_divider">
-		</section>
+		<div class="page-wrapper">
+			<section class="section1">
+				<iframe src="<?php echo($section1_video); ?>" frameborder="0" allowfullscreen></iframe>
+				<hr class="text_divider">
+				<p class="blurb">
+					<?php echo($section1_blurb); ?>
+				</p>
+				<hr class="text_divider">
+			</section>
 
-		<section class="section2">
-			<div class="section-wrapper">
-				<?php foreach ($officers as $officer => $_info):
-					$position = strtolower(preg_replace('/\s/','_',$_info['position']));
-				?>
-				<figure class="<?php echo($position); ?>">
-					<img src="<?php echo($_info['photo']); ?>" alt="<?php echo($_info['position']); ?>" />
-					
-
-					<figcaption>
-						<span><?php echo($_info['position']); ?></span>
+			<section class="section2">
+				<div class="section2_background"></div>
+				<div class="section-wrapper">
+					<?php foreach ($officers as $officer => $_info):
+						$position = strtolower(preg_replace('/\s/','_',$_info['position']));
+					?>
+					<figure class="<?php echo($position); ?>">
+						<img src="<?php echo($_info['photo']); ?>" alt="<?php echo($_info['position']); ?>" />
 						
-						<hr>
-						<span><?php echo($_info['name']); ?></span>
-						<span>Class of <?php echo($_info['graduation_year']); ?></span>
-					</figcaption>
-				</figure>
 
-				<?php endforeach; ?>
+						<figcaption>
+							<span><?php echo($_info['position']); ?></span>
+							
+							<hr>
+							<span><?php echo($_info['name']); ?></span>
+							<span>Class of <?php echo($_info['graduation_year']); ?></span>
+						</figcaption>
+					</figure>
 
-				<div class="white_crest">
-					<img src="<?php echo($siteOptions['url']); ?>images/whitecrest.png" alt="white crest" />
+					<?php endforeach; ?>
+
+					<div class="white_crest">
+						<img src="<?php echo($siteOptions['url']); ?>images/whitecrest.png" alt="white crest" />
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 <?php
 get_footer();

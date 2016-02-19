@@ -10,6 +10,34 @@ body,html{
 	overflow-x:hidden;
 }
 
+.page-wrapper{
+	width:$page_wrapper_default;
+	margin:0 auto;
+
+	@media #{$xlarge} {
+		width:960px;
+	}
+	@media #{$large} {
+		width:768px;
+	}
+	@media #{$medium} {
+		width:680px;
+	}
+	@media #{$xmedium} {
+		width:560px;
+	}
+	@media #{$_560px} {
+		width:480px;
+	}
+	@media #{$small} {
+		width: 360px;
+	}
+	@media #{$xsmall} {
+		width: 320px;
+	}
+}
+
+
 .text_divider{
   width: 40%;
   border-top: 2px solid black;

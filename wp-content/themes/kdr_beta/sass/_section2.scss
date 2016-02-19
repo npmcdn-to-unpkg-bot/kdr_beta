@@ -1,16 +1,22 @@
 section.section2{
 	width:100%;
-	height:590px;
-	background-color:$princeton;
-	
+	height:610px;
+		
+	.section2_background{
+    height: inherit;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: $princeton;
+	}
 
 	.section-wrapper{
-		width:$section2wrapperwidth;
 		margin:0 auto;
 		display:flex;
-		padding-top:$hr_padding;
-		height: 510px;
-    padding-bottom: $hr_padding;
+		position:absolute;
+		z-index:10;
+		padding:$top_paddings 0;
 	}
 
 	.worthy_consul{ order:3; margin:0 15px; }
@@ -32,6 +38,7 @@ section.section2{
 	    margin: 0 auto;
 	    height: 180px;
 		}
+
 		figcaption{
 			font-family:'open_regular_italic', sans-serif;
 			display:block;
@@ -60,6 +67,7 @@ section.section2{
 
 	.white_crest{
 		position:absolute;
+		height:0;
 		width:$section2wrapperwidth;
 		
 		img{
@@ -69,4 +77,16 @@ section.section2{
 			top: 340px;
 		}
 	}
+
+  @media #{$xlarge} {
+  	.worthy_consul{ margin: 0 5px; }
+		.senior_tribune,.junior_tribune{ margin: 50px 5px; }
+		.quaestor{ margin: 100px 0 0 5px; }
+		.rush_chair{ margin: 100px 5px 0 0; }
+  	figure img{ height:164px; }
+  	.white_crest img{
+  		left: 410px;
+    	top: 335px;
+  	}
+  }
 }
