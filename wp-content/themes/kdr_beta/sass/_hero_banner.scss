@@ -8,27 +8,27 @@ section.hero_banner{
 	position:relative;
 
 	.barker_content{
-    position: absolute;
-    z-index: 15;
-    width: 100%;
-    height:100%;
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.60);
-    
-    h1{
-    	letter-spacing: 5px;
-	    font-size: 9rem;
-	    margin-top:9.5rem;
-    }
+	    position: absolute;
+	    z-index: 15;
+	    width: 100%;
+	    height:100%;
+	    text-align: center;
+	    color: white;
+	    text-transform: uppercase;
+	    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.60);
+	    
+	    h1{
+	    	letter-spacing: 5px;
+		    font-size: 9rem;
+		    margin-top:9.5rem;
+	    }
 
-    h2{
-	    font-size: 3.5rem;
-	    letter-spacing: 5px;
-	    position: relative;
-	    bottom: 10px;
-    }
+	    h2{
+		    font-size: 3.5rem;
+		    letter-spacing: 5px;
+		    position: relative;
+		    bottom: 10px;
+	    }
 	}
 
 	.hero_banner_overlay{
@@ -45,6 +45,20 @@ section.hero_banner{
 			height: 100%;
 			position: relative;
 			right: 15%;
+		}
+	}
+	@media screen and (min-width:1920px){
+		overflow-y:hidden;
+		figure img{
+			height:auto;
+			width:100%;
+			right:0;
+		}
+	}
+
+	@media screen and (min-width:1665px) and (max-width:1919px){
+		figure img{
+			right:0;
 		}
 	}
 

@@ -54,28 +54,35 @@ get_header('homepage'); ?>
 			</section>
 
 			<section class="section2">
-				<div class="section2_background"></div>
-				<div class="section-wrapper">
-					<?php foreach ($officers as $officer => $_info):
-						$position = strtolower(preg_replace('/\s/','_',$_info['position']));
-					?>
-					<figure class="<?php echo($position); ?>">
-						<img src="<?php echo($_info['photo']); ?>" alt="<?php echo($_info['position']); ?>" />
-						
-
-						<figcaption>
-							<span><?php echo($_info['position']); ?></span>
+				<div class="section2_background">
+					<div class="texture"></div>
+				</div>
+				<div class="officer_wrapper">
+					<div class="section-wrapper">
+						<?php foreach ($officers as $officer => $_info):
+							$position = strtolower(preg_replace('/\s/','_',$_info['position']));
+						?>
+						<figure class="<?php echo($position); ?>">
+							<img src="<?php echo($_info['photo']); ?>" alt="<?php echo($_info['position']); ?>" />
 							
-							<hr>
-							<span><?php echo($_info['name']); ?></span>
-							<span>Class of <?php echo($_info['graduation_year']); ?></span>
-						</figcaption>
-					</figure>
 
-					<?php endforeach; ?>
+							<figcaption>
+								<span><?php echo($_info['position']); ?></span>
+								
+								<hr>
+								<span><?php echo($_info['name']); ?></span>
+								<span>Class of <?php echo($_info['graduation_year']); ?></span>
+							</figcaption>
+						</figure>
 
-					<div class="white_crest">
-						<img src="<?php echo($siteOptions['url']); ?>images/whitecrest.png" alt="white crest" />
+						<?php endforeach; ?>
+
+						<div class="white_crest">
+							<div class="exec_board">
+								<h3><?php echo(date("Y") . " Exec Board"); ?></h3>
+							</div>
+							<img src="<?php echo($siteOptions['url']); ?>images/whitecrest.png" alt="white crest" />
+						</div>
 					</div>
 				</div>
 			</section>
