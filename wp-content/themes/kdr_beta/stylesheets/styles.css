@@ -705,46 +705,135 @@ section.section2 .white_crest .exec_board h3 {
     height: 1080px;
   }
   /* line 151, ../sass/_section2.scss */
-  section.section2 .section-wrapper {
+  section.section2 .section-wrapper, section.section2 .white_crest {
     width: 560px;
   }
-  /* line 155, ../sass/_section2.scss */
+  /* line 153, ../sass/_section2.scss */
   section.section2 .officer_wrapper {
     width: 600px;
     margin: 0 auto;
   }
-  /* line 156, ../sass/_section2.scss */
+  /* line 154, ../sass/_section2.scss */
   section.section2 .worthy_consul {
     order: 1;
     margin: 0 10px 0 90px;
   }
-  /* line 157, ../sass/_section2.scss */
+  /* line 155, ../sass/_section2.scss */
   section.section2 .senior_tribune {
     order: 2;
   }
-  /* line 158, ../sass/_section2.scss */
+  /* line 156, ../sass/_section2.scss */
   section.section2 .junior_tribune {
     order: 3;
     position: absolute;
     top: 440px;
     left: 85px;
   }
-  /* line 162, ../sass/_section2.scss */
-  section.section2 .rush_chair {
-    order: 4;
+  /* line 160, ../sass/_section2.scss */
+  section.section2 .quaestor {
+    order: 5;
     position: absolute;
     top: 240px;
     left: 290px;
   }
-  /* line 166, ../sass/_section2.scss */
-  section.section2 .quaestor {
-    order: 5;
+  /* line 164, ../sass/_section2.scss */
+  section.section2 .rush_chair {
+    order: 4;
     position: absolute;
     top: 540px;
     left: 190px;
   }
-  /* line 170, ../sass/_section2.scss */
-  section.section2 .white_crest {
-    width: 560px;
+}
+@media screen and (max-width: 560px) {
+  /* line 171, ../sass/_section2.scss */
+  section.section2 .section-wrapper, section.section2 .white_crest {
+    width: 480px;
+  }
+  /* line 173, ../sass/_section2.scss */
+  section.section2 .worthy_consul {
+    margin: 0 10px 0 48px;
+  }
+  /* line 174, ../sass/_section2.scss */
+  section.section2 .junior_tribune {
+    left: 43px;
+  }
+  /* line 175, ../sass/_section2.scss */
+  section.section2 .quaestor {
+    left: 246px;
+  }
+  /* line 176, ../sass/_section2.scss */
+  section.section2 .rush_chair {
+    left: 147px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 179, ../sass/_section2.scss */
+  section.section2 .section-wrapper, section.section2 .white_crest {
+    width: 360px;
+  }
+  /* line 180, ../sass/_section2.scss */
+  section.section2 .worthy_consul {
+    margin: 0 10px 0 -12px;
+  }
+  /* line 181, ../sass/_section2.scss */
+  section.section2 .junior_tribune {
+    left: -17px;
+  }
+  /* line 182, ../sass/_section2.scss */
+  section.section2 .quaestor {
+    left: 186px;
+  }
+  /* line 183, ../sass/_section2.scss */
+  section.section2 .rush_chair {
+    left: 87px;
+  }
+}
+@media screen and (max-width: 420px) {
+  /* line 1, ../sass/_section2.scss */
+  section.section2 {
+    height: 1690px;
+  }
+  /* line 188, ../sass/_section2.scss */
+  section.section2 .section-wrapper {
+    display: block;
+  }
+  /* line 190, ../sass/_section2.scss */
+  section.section2 figure figcaption hr {
+    width: 150px;
+  }
+  /* line 194, ../sass/_section2.scss */
+  section.section2 .worthy_consul, section.section2 .senior_tribune, section.section2 .junior_tribune, section.section2 .quaestor, section.section2 .rush_chair {
+    height: 284px;
+    display: block;
+    margin: 0;
+    left: initial;
+    top: initial;
+    position: static;
+    width: inherit;
+    top: initial;
+  }
+  /* line 204, ../sass/_section2.scss */
+  section.section2 .worthy_consul figcaption, section.section2 .senior_tribune figcaption, section.section2 .junior_tribune figcaption, section.section2 .quaestor figcaption, section.section2 .rush_chair figcaption {
+    width: inherit;
+  }
+  /* line 209, ../sass/_section2.scss */
+  section.section2 .senior_tribune, section.section2 .junior_tribune, section.section2 .quaestor, section.section2 .rush_chair {
+    margin-top: 20px;
+  }
+  /* line 212, ../sass/_section2.scss */
+  section.section2 .white_crest .exec_board h3 {
+    top: initial;
+    right: 0px;
+    bottom: 1570px;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* line 220, ../sass/_section2.scss */
+  section.section2 .section-wrapper, section.section2 .white_crest {
+    width: 320px;
+  }
+  /* line 221, ../sass/_section2.scss */
+  section.section2 .white_crest .exec_board h3 {
+    font-size: 28px;
   }
 }
