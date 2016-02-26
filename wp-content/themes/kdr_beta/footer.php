@@ -13,6 +13,7 @@
 		</div><!-- .page-wrapper < -->
 	</div><!-- #content -->
 
+	<?php global $siteOptions;?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kdr_beta' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kdr_beta' ), 'WordPress' ); ?></a>

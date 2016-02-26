@@ -18,7 +18,10 @@ $fields = array(
 	'herobanner_subtext' 	=> 'hero_banner_barker_subtext',
 	'section1_video' 		=> 'section_1_video',
 	'section1_blurb'		=> 'section_1_blurb',
-	'officers'				=> 'officers'
+	'officers'				=> 'officers',
+	'section3_text'			=> 'section_3_title',
+	'section3_paragraph'	=> 'section_3_paragraph',
+	'map'					=> 'where_are_we'
 );
 foreach ( $fields as $key => $val):
 	$$key = get_field('homepage_content')[0][$val];
@@ -86,5 +89,64 @@ get_header('homepage'); ?>
 					</div>
 				</div>
 			</section>
+
+			<section class="section3">
+				<h2><?php echo($section3_text); ?></h2>
+				<p><?php echo($section3_paragraph); ?></p>
+			</section>
+
+			<section class="section4">
+				<div class="section4_background">
+					<div class="texture"></div>
+				</div>
+				<div class="gallery_wrapper">
+					<div class="gallery grid">
+						<h2>Gallery</h2>
+						<?php $_1_prev_random = false; $_2_prev_random = false;
+							foreach(corrected_homepage_image_gallery(do_shortcode('[mediatag name="image_gallery" size="large" class="gallery"]')) as $ind => $url):
+							$what_size = rand(0,10)%2;
+							
+							if($what_size===1 && $_1_prev_random === false){
+								$_1_prev_random = true;
+							?>
+								<figure class="grid-item<?php {echo(' grid-item--width2');} ?>">
+									<img data-src="<?php echo($url); ?>" src="<?php echo($url); ?>" alt="<?php echo($ind); ?>" />
+								</figure>
+							<?php } else { 
+								$_1_prev_random = false;
+							?>
+								<figure class="grid-item">
+									<img data-src="<?php echo($url); ?>" src="<?php echo($url); ?>" alt="<?php echo($ind); ?>" />
+								</figure>
+							<?php } ?>
+							
+								
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</section>
+
+			<section class="section5">
+				<?php do_shortcode($map);?>
+			</section>
 <?php
 get_footer();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

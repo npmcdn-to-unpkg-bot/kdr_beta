@@ -1,61 +1,62 @@
 @import url(../fonts/opensans_lightitalic_macroman/stylesheet.css);
 @import url(../fonts/opensans_regular_macroman/stylesheet.css);
+@import url(../fonts/opensans_semibold_macroman/stylesheet.css);
 @import url(../fonts/bebas_neue/stylesheet.css);
-/* line 7, ../sass/styles.scss */
+/* line 8, ../sass/styles.scss */
 body, html {
   background-color: #e8e6e4;
   overflow-x: hidden;
 }
 
-/* line 12, ../sass/styles.scss */
+/* line 13, ../sass/styles.scss */
 .page-wrapper {
   width: 1120px;
   margin: 0 auto;
 }
 @media screen and (max-width: 1120px) {
-  /* line 12, ../sass/styles.scss */
+  /* line 13, ../sass/styles.scss */
   .page-wrapper {
     width: 960px;
   }
 }
 @media screen and (max-width: 960px) {
-  /* line 12, ../sass/styles.scss */
+  /* line 13, ../sass/styles.scss */
   .page-wrapper {
     width: 768px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 12, ../sass/styles.scss */
+  /* line 13, ../sass/styles.scss */
   .page-wrapper {
     width: 680px;
   }
 }
 @media screen and (max-width: 680px) {
-  /* line 12, ../sass/styles.scss */
+  /* line 13, ../sass/styles.scss */
   .page-wrapper {
     width: 560px;
   }
 }
 @media screen and (max-width: 560px) {
-  /* line 12, ../sass/styles.scss */
+  /* line 13, ../sass/styles.scss */
   .page-wrapper {
     width: 480px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 12, ../sass/styles.scss */
+  /* line 13, ../sass/styles.scss */
   .page-wrapper {
     width: 360px;
   }
 }
 @media screen and (max-width: 360px) {
-  /* line 12, ../sass/styles.scss */
+  /* line 13, ../sass/styles.scss */
   .page-wrapper {
     width: 320px;
   }
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 .text_divider {
   width: 40%;
   border-top: 2px solid black;
@@ -470,7 +471,7 @@ section.section1 .blurb {
 /* line 1, ../sass/_section2.scss */
 section.section2 {
   width: 100%;
-  height: 670px;
+  height: 680px;
 }
 /* line 5, ../sass/_section2.scss */
 section.section2 .section2_background {
@@ -836,4 +837,85 @@ section.section2 .white_crest .exec_board h3 {
   section.section2 .white_crest .exec_board h3 {
     font-size: 28px;
   }
+}
+
+/* line 1, ../sass/_section3.scss */
+section.section3 {
+  font-family: 'open_sanssemibold';
+}
+/* line 4, ../sass/_section3.scss */
+section.section3 h2 {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 28px;
+  padding: 40px 0 20px 0;
+}
+/* line 11, ../sass/_section3.scss */
+section.section3 p {
+  font-family: 'open_sansregular';
+  font-size: 20px;
+  line-height: 26px;
+  padding: 0 20px 40px 20px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* line 1, ../sass/_section4.scss */
+section.section4 {
+  width: 100%;
+}
+/* line 4, ../sass/_section4.scss */
+section.section4 .section4_background {
+  position: absolute;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  z-index: 10;
+}
+/* line 11, ../sass/_section4.scss */
+section.section4 .section4_background .texture {
+  height: inherit;
+  background-image: url("../images/light_noise.png");
+  background-color: #003f87;
+  background-blend-mode: multiply;
+}
+/* line 17, ../sass/_section4.scss */
+section.section4 .gallery_wrapper {
+  padding: 120px 0;
+}
+/* line 19, ../sass/_section4.scss */
+section.section4 .gallery {
+  position: absolute;
+  z-index: 15;
+  width: 100%;
+}
+/* line 24, ../sass/_section4.scss */
+section.section4 .gallery h2 {
+  font-family: 'open_sansregular';
+  font-size: 40px;
+  line-height: 26px;
+  position: relative;
+  top: -60px;
+  text-align: center;
+  color: white;
+}
+/* line 34, ../sass/_section4.scss */
+section.section4 .gallery .grid-item {
+  width: 220px;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+/* line 39, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--width2 {
+  width: 443px;
+  margin-bottom: 3px;
+}
+/* line 44, ../sass/_section4.scss */
+section.section4 .gallery .grid-item img {
+  width: inherit;
+  height: auto;
+}
+/* line 48, ../sass/_section4.scss */
+section.section4 .gallery .grid-item img:hover {
+  cursor: pointer;
 }

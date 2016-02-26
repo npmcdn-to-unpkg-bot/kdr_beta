@@ -1,0 +1,57 @@
+section.section4{
+	width:100%;
+
+	.section4_background{
+		position:absolute;
+		left:0;
+		height:inherit;
+		width:inherit;
+		z-index:10;
+
+   		.texture{
+   			height:inherit;
+   			@include blendy('light_noise.png', $middleberry, multiply);
+   		}
+	}
+
+	.gallery_wrapper{padding:$top_paddings*2 0}
+
+	.gallery{
+		position:absolute;
+		z-index:15;
+		width:100%;
+
+		h2{
+			font-family:'open_sansregular';
+			font-size:40px;
+			line-height:$line_height;
+			position: relative;
+			top: -60px;
+			text-align: center;
+			color: white;
+		}
+
+		.grid-item {
+			width:220px;
+			overflow:hidden;
+			margin-bottom:3px;
+
+			&.grid-item--width2{
+				width:443px;
+				margin-bottom:3px;
+			}
+
+			img{
+				width:inherit;
+				height:auto;
+
+				&:hover{
+					cursor:pointer;
+				}
+			}
+		}
+
+
+	}
+	
+}
