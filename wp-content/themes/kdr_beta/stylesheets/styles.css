@@ -142,7 +142,7 @@ header .menu .sub-menu {
   text-align: left;
   background-color: #32333d;
   position: absolute;
-  top: 59px;
+  top: 91px;
   right: 0;
   width: 146px;
   min-width: 100px;
@@ -889,7 +889,7 @@ section.section4 .section4_background .texture {
 }
 /* line 19, ../sass/_section4.scss */
 section.section4 .gallery_wrapper {
-  padding: 120px 0;
+  padding: 120px 0 0;
   width: inherit;
 }
 /* line 21, ../sass/_section4.scss */
@@ -1045,4 +1045,10 @@ section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
     height: 280px;
     width: 280px;
   }
+}
+
+/* line 1, ../sass/_section5.scss */
+section.section5 {
+  height: 400px;
+  background-color: green;
 }

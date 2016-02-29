@@ -124,10 +124,12 @@ function kdr_beta_scripts() {
 	wp_enqueue_script( 'jquery_cdn', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js', array(), '20120206', true );
 	wp_enqueue_script( 'kdr_beta-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'imageloader', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), '20120206', true );
 
+	wp_enqueue_script( 'imageloader', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), '20120206', true );
 	wp_enqueue_script( 'smartresize', get_template_directory_uri() . '/js/smartresize.min.js', array(), '20120206', true );
 	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), '20120206', true );
+	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js', array(), '20120206', true );
+
 
 	wp_enqueue_script( 'kdr_beta-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script( 'kdr_beta-site', get_template_directory_uri() . '/js/site.js', array(), '20120206', true );

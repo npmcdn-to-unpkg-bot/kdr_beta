@@ -21,19 +21,17 @@
 			}
 		};
 
-		var resizeContainer = function (){
+		var resizeGridContainer = function (){
 			if(window.innerWidth <= 480){
 				$grid.width(280);
 			}
 		};
 
 		reorderElements();
-		resizeContainer();
-
-
+		resizeGridContainer();
 		$(window).smartresize(function(){
 			reorderElements();
-			resizeContainer();
+			resizeGridContainer();
 		});
 	});
 

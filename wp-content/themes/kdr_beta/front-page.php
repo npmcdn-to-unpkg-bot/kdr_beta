@@ -110,8 +110,7 @@ get_header('homepage'); ?>
 							// $image_url = array_shift($image_urls);	
 					?>
 						<figure 
-							class="grid-item grid-item--<?php echo($grid_type); ?>" 
-							data-src="<?php echo($image['url']); ?>"
+							class="grid-item grid-item--<?php echo($grid_type); ?>"
 							style="background: url(<?php echo($image['url']); ?>); background-size:cover; background-position:50%; background-repeat:no-repeat">
 							<figcaption 
 								class="title_container"
