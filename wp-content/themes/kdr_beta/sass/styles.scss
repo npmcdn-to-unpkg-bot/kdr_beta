@@ -43,6 +43,11 @@ body,html{
   margin: 0 auto;
 }
 
+#page{
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+
 @import "header";
 @import "hero_banner";
 @import "section1";

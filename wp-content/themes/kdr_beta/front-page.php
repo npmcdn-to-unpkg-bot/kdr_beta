@@ -102,26 +102,26 @@ get_header('homepage'); ?>
 				<div class="gallery_wrapper">
 					<div class="gallery grid">
 						<h2>Gallery</h2>
-						<?php $_1_prev_random = false; $_2_prev_random = false;
-							foreach(corrected_homepage_image_gallery(do_shortcode('[mediatag name="image_gallery" size="large" class="gallery"]')) as $ind => $url):
-							$what_size = rand(0,10)%2;
-							
-							if($what_size===1 && $_1_prev_random === false){
-								$_1_prev_random = true;
-							?>
-								<figure class="grid-item<?php {echo(' grid-item--width2');} ?>">
-									<img data-src="<?php echo($url); ?>" src="<?php echo($url); ?>" alt="<?php echo($ind); ?>" />
-								</figure>
-							<?php } else { 
-								$_1_prev_random = false;
-							?>
-								<figure class="grid-item">
-									<img data-src="<?php echo($url); ?>" src="<?php echo($url); ?>" alt="<?php echo($ind); ?>" />
-								</figure>
-							<?php } ?>
-							
-								
-						<?php endforeach; ?>
+					<?php 
+						$grid_items = ['h2','n','w2','n','x2','w2','n','n','n','w2','n','w2','x2','n','h2','n','n','n'];
+						$image_urls = corrected_homepage_image_gallery(do_shortcode('[mediatag name="image_gallery" size="large" class="gallery"]'));
+						foreach($grid_items as $index => $grid_type):
+							$image = $image_urls[$index];
+							// $image_url = array_shift($image_urls);	
+					?>
+						<figure 
+							class="grid-item grid-item--<?php echo($grid_type); ?>" 
+							data-src="<?php echo($image['url']); ?>"
+							style="background: url(<?php echo($image['url']); ?>); background-size:cover; background-position:50%; background-repeat:no-repeat">
+							<figcaption 
+								class="title_container"
+								data-src="<?php echo($image['url']); ?>">
+								<span><?php echo($image['title']); ?></span>
+							</figcaption>
+						</figure>	
+					<?php			
+						endforeach; 
+					?>
 					</div>
 				</div>
 			</section>

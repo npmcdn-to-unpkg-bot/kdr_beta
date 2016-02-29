@@ -63,6 +63,12 @@ body, html {
   margin: 0 auto;
 }
 
+/* line 46, ../sass/styles.scss */
+#page {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 /* line 1, ../sass/_header.scss */
 header {
   height: 60px;
@@ -863,8 +869,10 @@ section.section3 p {
 /* line 1, ../sass/_section4.scss */
 section.section4 {
   width: 100%;
+  height: 1500px;
+  min-height: 500px;
 }
-/* line 4, ../sass/_section4.scss */
+/* line 6, ../sass/_section4.scss */
 section.section4 .section4_background {
   position: absolute;
   left: 0;
@@ -872,24 +880,26 @@ section.section4 .section4_background {
   width: inherit;
   z-index: 10;
 }
-/* line 11, ../sass/_section4.scss */
+/* line 13, ../sass/_section4.scss */
 section.section4 .section4_background .texture {
   height: inherit;
   background-image: url("../images/light_noise.png");
   background-color: #003f87;
   background-blend-mode: multiply;
 }
-/* line 17, ../sass/_section4.scss */
+/* line 19, ../sass/_section4.scss */
 section.section4 .gallery_wrapper {
   padding: 120px 0;
+  width: inherit;
 }
-/* line 19, ../sass/_section4.scss */
+/* line 21, ../sass/_section4.scss */
 section.section4 .gallery {
   position: absolute;
   z-index: 15;
-  width: 100%;
+  width: 1120px;
+  margin: 0 auto;
 }
-/* line 24, ../sass/_section4.scss */
+/* line 27, ../sass/_section4.scss */
 section.section4 .gallery h2 {
   font-family: 'open_sansregular';
   font-size: 40px;
@@ -899,23 +909,140 @@ section.section4 .gallery h2 {
   text-align: center;
   color: white;
 }
-/* line 34, ../sass/_section4.scss */
+/* line 37, ../sass/_section4.scss */
 section.section4 .gallery .grid-item {
-  width: 220px;
   overflow: hidden;
-  margin-bottom: 3px;
+  display: inline-block;
+  width: 215px;
+  height: 215px;
+  margin-bottom: 6px;
+  background-size: cover;
 }
-/* line 39, ../sass/_section4.scss */
-section.section4 .gallery .grid-item.grid-item--width2 {
-  width: 443px;
-  margin-bottom: 3px;
-}
-/* line 44, ../sass/_section4.scss */
-section.section4 .gallery .grid-item img {
+/* line 45, ../sass/_section4.scss */
+section.section4 .gallery .grid-item figcaption {
+  height: inherit;
   width: inherit;
-  height: auto;
+  text-align: center;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: relative;
 }
-/* line 48, ../sass/_section4.scss */
-section.section4 .gallery .grid-item img:hover {
+/* line 53, ../sass/_section4.scss */
+section.section4 .gallery .grid-item figcaption:hover {
   cursor: pointer;
+  background-color: #ff8f00;
+  opacity: 0.75;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75);
+}
+/* line 59, ../sass/_section4.scss */
+section.section4 .gallery .grid-item figcaption span {
+  font-family: 'open_sansregular';
+  color: white;
+  position: relative;
+  font-size: 30px;
+  text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.65);
+}
+/* line 68, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--h2 {
+  height: 436px;
+  width: 220px;
+}
+/* line 72, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--h2 figcaption span {
+  top: 46%;
+}
+/* line 74, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--n {
+  width: 220px;
+}
+/* line 77, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--n figcaption span {
+  top: 37%;
+}
+/* line 80, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--w2 {
+  width: 446px;
+}
+/* line 82, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--w2 figcaption span {
+  top: 43%;
+}
+/* line 84, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--x2 {
+  width: 446px;
+  height: 436px;
+}
+/* line 87, ../sass/_section4.scss */
+section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
+  top: 47%;
+}
+@media screen and (max-width: 1120px) {
+  /* line 1, ../sass/_section4.scss */
+  section.section4 {
+    height: 1930px;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 1, ../sass/_section4.scss */
+  section.section4 {
+    height: 2610px;
+  }
+}
+@media screen and (max-width: 680px) {
+  /* line 1, ../sass/_section4.scss */
+  section.section4 {
+    height: 2200px;
+  }
+  /* line 100, ../sass/_section4.scss */
+  section.section4 .gallery .grid-item.grid-item--h2,
+  section.section4 .gallery .grid-item.grid-item--n,
+  section.section4 .gallery .grid-item.grid-item--w2,
+  section.section4 .gallery .grid-item.grid-item--x2 {
+    height: 220px;
+    width: 220px;
+  }
+  /* line 105, ../sass/_section4.scss */
+  section.section4 .gallery .grid-item.grid-item--h2 figcaption span,
+  section.section4 .gallery .grid-item.grid-item--n figcaption span,
+  section.section4 .gallery .grid-item.grid-item--w2 figcaption span,
+  section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
+    top: 37%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 1, ../sass/_section4.scss */
+  section.section4 {
+    height: 5310px;
+  }
+  /* line 112, ../sass/_section4.scss */
+  section.section4 .gallery .grid-item.grid-item--h2,
+  section.section4 .gallery .grid-item.grid-item--n,
+  section.section4 .gallery .grid-item.grid-item--w2,
+  section.section4 .gallery .grid-item.grid-item--x2 {
+    height: 280px;
+    width: 280px;
+  }
+  /* line 117, ../sass/_section4.scss */
+  section.section4 .gallery .grid-item.grid-item--h2 figcaption span,
+  section.section4 .gallery .grid-item.grid-item--n figcaption span,
+  section.section4 .gallery .grid-item.grid-item--w2 figcaption span,
+  section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
+    top: 45%;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* line 124, ../sass/_section4.scss */
+  section.section4 .gallery {
+    width: 280px;
+  }
+  /* line 125, ../sass/_section4.scss */
+  section.section4 .gallery .grid-item.grid-item--h2,
+  section.section4 .gallery .grid-item.grid-item--n,
+  section.section4 .gallery .grid-item.grid-item--w2,
+  section.section4 .gallery .grid-item.grid-item--x2 {
+    height: 280px;
+    width: 280px;
+  }
 }
