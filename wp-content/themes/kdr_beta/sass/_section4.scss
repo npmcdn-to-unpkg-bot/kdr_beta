@@ -47,6 +47,7 @@ section.section4{
 				width:inherit;
 				text-align:center;
 				@include opacity(0);
+				@include transition(opacity 0.15s ease);
 				position:relative;
 
 
@@ -54,6 +55,7 @@ section.section4{
 					cursor:pointer;
 					background-color: $princeton;
 					@include opacity(0.75);
+					@include transition(opacity 0.15s ease);
 				}
 
 				span{

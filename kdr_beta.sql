@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Feb 29, 2016 at 11:50 PM
+-- Generation Time: Mar 01, 2016 at 11:49 PM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -29,7 +29,7 @@ USE `wordpress`;
 --
 
 DROP TABLE IF EXISTS `wp_commentmeta`;
-CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
+CREATE TABLE `wp_commentmeta` (
   `meta_id` bigint(20) unsigned NOT NULL,
   `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -48,7 +48,7 @@ TRUNCATE TABLE `wp_commentmeta`;
 --
 
 DROP TABLE IF EXISTS `wp_comments`;
-CREATE TABLE IF NOT EXISTS `wp_comments` (
+CREATE TABLE `wp_comments` (
   `comment_ID` bigint(20) unsigned NOT NULL,
   `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
   `comment_author` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -85,7 +85,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 --
 
 DROP TABLE IF EXISTS `wp_links`;
-CREATE TABLE IF NOT EXISTS `wp_links` (
+CREATE TABLE `wp_links` (
   `link_id` bigint(20) unsigned NOT NULL,
   `link_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `link_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -113,12 +113,12 @@ TRUNCATE TABLE `wp_links`;
 --
 
 DROP TABLE IF EXISTS `wp_options`;
-CREATE TABLE IF NOT EXISTS `wp_options` (
+CREATE TABLE `wp_options` (
   `option_id` bigint(20) unsigned NOT NULL,
   `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=358 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=365 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Truncate table before insert `wp_options`
@@ -231,9 +231,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (100, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (101, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(103, 'cron', 'a:4:{i:1456812556;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1456855766;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1456866466;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
-(108, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.4.2.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.4.2.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.4.2-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.4.2-new-bundled.zip";s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.4.2";s:7:"version";s:5:"4.4.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1456769383;s:15:"version_checked";s:5:"4.4.2";s:12:"translations";a:0:{}}', 'yes'),
-(113, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1456769386;s:7:"checked";a:1:{s:8:"kdr_beta";s:0:"";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
+(103, 'cron', 'a:4:{i:1456855756;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1456855766;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1456866466;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(108, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.4.2.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.4.2.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.4.2-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.4.2-new-bundled.zip";s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.4.2";s:7:"version";s:5:"4.4.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1456841753;s:15:"version_checked";s:5:"4.4.2";s:12:"translations";a:0:{}}', 'yes'),
+(113, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1456841756;s:7:"checked";a:1:{s:8:"kdr_beta";s:0:"";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
 (117, 'can_compress_scripts', '1', 'yes'),
 (135, '_transient_twentysixteen_categories', '1', 'yes'),
 (138, 'theme_mods_twentysixteen', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1455132506;s:4:"data";a:2:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}}}}', 'yes'),
@@ -242,7 +242,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (141, 'theme_switched', '', 'yes'),
 (146, 'recently_activated', 'a:1:{s:47:"responsive-google-map/responsive-google-map.php";i:1456523750;}', 'yes'),
 (167, 'acf_version', '4.4.5', 'yes'),
-(175, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1456769385;s:8:"response";a:0:{}s:12:"translations";a:0:{}s:9:"no_update";a:5:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:5:"21367";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:5:"4.4.5";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:71:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.5.zip";}s:40:"acf-image-crop-add-on/acf-image-crop.php";O:8:"stdClass":6:{s:2:"id";s:5:"47529";s:4:"slug";s:21:"acf-image-crop-add-on";s:6:"plugin";s:40:"acf-image-crop-add-on/acf-image-crop.php";s:11:"new_version";s:5:"1.4.7";s:3:"url";s:52:"https://wordpress.org/plugins/acf-image-crop-add-on/";s:7:"package";s:70:"https://downloads.wordpress.org/plugin/acf-image-crop-add-on.1.4.7.zip";}s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"3.1.7";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.3.1.7.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}s:45:"wordpress-media-tags/wordpress-media-tags.php";O:8:"stdClass":6:{s:2:"id";s:5:"25069";s:4:"slug";s:20:"wordpress-media-tags";s:6:"plugin";s:45:"wordpress-media-tags/wordpress-media-tags.php";s:11:"new_version";s:3:"1.5";s:3:"url";s:51:"https://wordpress.org/plugins/wordpress-media-tags/";s:7:"package";s:67:"https://downloads.wordpress.org/plugin/wordpress-media-tags.1.5.zip";}}}', 'yes'),
+(175, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1456841755;s:8:"response";a:0:{}s:12:"translations";a:0:{}s:9:"no_update";a:5:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:5:"21367";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:5:"4.4.5";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:71:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.5.zip";}s:40:"acf-image-crop-add-on/acf-image-crop.php";O:8:"stdClass":6:{s:2:"id";s:5:"47529";s:4:"slug";s:21:"acf-image-crop-add-on";s:6:"plugin";s:40:"acf-image-crop-add-on/acf-image-crop.php";s:11:"new_version";s:5:"1.4.7";s:3:"url";s:52:"https://wordpress.org/plugins/acf-image-crop-add-on/";s:7:"package";s:70:"https://downloads.wordpress.org/plugin/acf-image-crop-add-on.1.4.7.zip";}s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"3.1.7";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.3.1.7.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}s:45:"wordpress-media-tags/wordpress-media-tags.php";O:8:"stdClass":6:{s:2:"id";s:5:"25069";s:4:"slug";s:20:"wordpress-media-tags";s:6:"plugin";s:45:"wordpress-media-tags/wordpress-media-tags.php";s:11:"new_version";s:3:"1.5";s:3:"url";s:51:"https://wordpress.org/plugins/wordpress-media-tags/";s:7:"package";s:67:"https://downloads.wordpress.org/plugin/wordpress-media-tags.1.5.zip";}}}', 'yes'),
 (183, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes'),
 (201, 'mic_make2x', 'true', 'yes'),
 (203, 'acf_image_crop_settings', '', 'yes'),
@@ -280,9 +280,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (349, '_transient_plugin_slugs', 'a:6:{i:0;s:30:"advanced-custom-fields/acf.php";i:1;s:40:"acf-image-crop-add-on/acf-image-crop.php";i:2;s:16:"acf-repeater.php";i:3;s:19:"akismet/akismet.php";i:4;s:9:"hello.php";i:5;s:45:"wordpress-media-tags/wordpress-media-tags.php";}', 'no'),
 (350, '_transient_timeout_dash_88ae138922fe95674369b1cb3d215a2b', '1456809043', 'no'),
 (351, '_transient_dash_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wordpress.org/news/2016/02/contributor-weekend-one-hour-video/''>Contributor Weekend: One-Hour Video</a> <span class="rss-date">February 26, 2016</span><div class="rssSummary">It’s time for our second global contributor weekend, and this time we’re focusing on the video team. For this month’s challenge, in honor of it being our second month, you have two options for how you can participate! The challenge for this month overall is to work with at least one hour worth of WordCamp video, which [&hellip;]</div></li></ul></div><div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://wptavern.com/mandrill-to-discontinue-free-tier-for-transactional-emails-developers-seek-alternatives''>WPTavern: Mandrill to Discontinue Free Tier for Transactional Emails, Developers Seek Alternatives</a></li><li><a class=''rsswidget'' href=''http://wptavern.com/austin-wordpress-meetup-to-host-charity-hackathon-april-8-2016''>WPTavern: Austin WordPress Meetup to Host Charity Hackathon April 8, 2016</a></li><li><a class=''rsswidget'' href=''http://wptavern.com/the-wordpress-plugin-directory-is-getting-a-makeover''>WPTavern: The WordPress Plugin Directory Is Getting a Makeover</a></li></ul></div><div class="rss-widget"><ul><li class=''dashboard-news-plugin''><span>Popular Plugin:</span> <a href=''https://wordpress.org/plugins/wpclef/'' class=''dashboard-news-plugin-link''>Clef Two-Factor Authentication</a>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=wpclef&amp;_wpnonce=c5a0ed9df3&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''Clef Two-Factor Authentication''>Install</a>)</span></li></ul></div>', 'no'),
-(352, '_transient_is_multi_author', '0', 'yes'),
-(355, '_site_transient_timeout_theme_roots', '1456771184', 'yes'),
-(356, '_site_transient_theme_roots', 'a:1:{s:8:"kdr_beta";s:7:"/themes";}', 'yes');
+(360, '_site_transient_timeout_theme_roots', '1456843554', 'yes'),
+(361, '_site_transient_theme_roots', 'a:1:{s:8:"kdr_beta";s:7:"/themes";}', 'yes'),
+(362, '_transient_is_multi_author', '0', 'yes'),
+(363, '_transient_doing_cron', '1456864195.8519721031188964843750', 'yes'),
+(364, '_transient_kdr_beta_categories', '1', 'yes');
 
 -- --------------------------------------------------------
 
@@ -291,12 +293,12 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 --
 
 DROP TABLE IF EXISTS `wp_postmeta`;
-CREATE TABLE IF NOT EXISTS `wp_postmeta` (
+CREATE TABLE `wp_postmeta` (
   `meta_id` bigint(20) unsigned NOT NULL,
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=1042 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1137 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Truncate table before insert `wp_postmeta`
@@ -314,13 +316,13 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (5, 5, '_wp_attachment_context', 'custom-header'),
 (6, 5, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1000;s:6:"height";i:250;s:4:"file";s:38:"2016/02/cropped-kdr_snap_shot-copy.png";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:38:"cropped-kdr_snap_shot-copy-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:37:"cropped-kdr_snap_shot-copy-300x75.png";s:5:"width";i:300;s:6:"height";i:75;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:38:"cropped-kdr_snap_shot-copy-768x192.png";s:5:"width";i:768;s:6:"height";i:192;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (15, 8, '_edit_last', '1'),
-(16, 8, '_edit_lock', '1456523598:1'),
+(16, 8, '_edit_lock', '1456843715:1'),
 (22, 14, '_edit_last', '1'),
-(23, 14, 'field_56bcfa669e8f5', 'a:13:{s:3:"key";s:19:"field_56bcfa669e8f5";s:5:"label";s:16:"Homepage Content";s:4:"name";s:16:"homepage_content";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:9:{i:0;a:15:{s:3:"key";s:19:"field_56c3441783b7b";s:5:"label";s:23:"Hero Banner Barker Text";s:4:"name";s:23:"hero_banner_barker_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_56c3445b08452";s:5:"label";s:26:"Hero Banner Barker Subtext";s:4:"name";s:26:"hero_banner_barker_subtext";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:14:{s:3:"key";s:19:"field_56c2410ec5694";s:5:"label";s:11:"Hero Images";s:4:"name";s:11:"hero_images";s:4:"type";s:8:"repeater";s:12:"instructions";s:48:"Images Must be 1920 x 547 (or same aspect ratio)";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:10:"sub_fields";a:1:{i:0;a:12:{s:3:"key";s:19:"field_56c24128c5695";s:5:"label";s:5:"Image";s:4:"name";s:5:"image";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:11:"save_format";s:3:"url";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:3:"row";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:15:{s:3:"key";s:19:"field_56c3a3403d6b0";s:5:"label";s:15:"Section 1 Video";s:4:"name";s:15:"section_1_video";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}i:4;a:14:{s:3:"key";s:19:"field_56c4ac43aaf2f";s:5:"label";s:15:"Section 1 Blurb";s:4:"name";s:15:"section_1_blurb";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}i:5;a:14:{s:3:"key";s:19:"field_56c4dedc91575";s:5:"label";s:8:"Officers";s:4:"name";s:8:"officers";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:10:"sub_fields";a:4:{i:0;a:12:{s:3:"key";s:19:"field_56c4deef91576";s:5:"label";s:5:"Photo";s:4:"name";s:5:"photo";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:11:"save_format";s:3:"url";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_56c4df0991577";s:5:"label";s:8:"Position";s:4:"name";s:8:"position";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:15:{s:3:"key";s:19:"field_56c4df3a91578";s:5:"label";s:4:"Name";s:4:"name";s:4:"name";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:15:{s:3:"key";s:19:"field_56c4df4891579";s:5:"label";s:15:"Graduation Year";s:4:"name";s:15:"graduation_year";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}}s:7:"row_min";s:1:"5";s:9:"row_limit";s:1:"5";s:6:"layout";s:5:"table";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}i:6;a:15:{s:3:"key";s:19:"field_56cc8b4651ec1";s:5:"label";s:15:"Section 3 Title";s:4:"name";s:15:"section_3_title";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}i:7;a:14:{s:3:"key";s:19:"field_56cc8bc251ec4";s:5:"label";s:19:"Section 3 Paragraph";s:4:"name";s:19:"section_3_paragraph";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}i:8;a:15:{s:3:"key";s:19:"field_56d0c7ae029b7";s:5:"label";s:13:"Where Are We?";s:4:"name";s:12:"where_are_we";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}}s:7:"row_min";s:1:"1";s:9:"row_limit";s:1:"1";s:6:"layout";s:3:"row";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
+(23, 14, 'field_56bcfa669e8f5', 'a:13:{s:3:"key";s:19:"field_56bcfa669e8f5";s:5:"label";s:16:"Homepage Content";s:4:"name";s:16:"homepage_content";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:10:{i:0;a:15:{s:3:"key";s:19:"field_56c3441783b7b";s:5:"label";s:23:"Hero Banner Barker Text";s:4:"name";s:23:"hero_banner_barker_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_56c3445b08452";s:5:"label";s:26:"Hero Banner Barker Subtext";s:4:"name";s:26:"hero_banner_barker_subtext";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:14:{s:3:"key";s:19:"field_56c2410ec5694";s:5:"label";s:11:"Hero Images";s:4:"name";s:11:"hero_images";s:4:"type";s:8:"repeater";s:12:"instructions";s:48:"Images Must be 1920 x 547 (or same aspect ratio)";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:10:"sub_fields";a:1:{i:0;a:12:{s:3:"key";s:19:"field_56c24128c5695";s:5:"label";s:5:"Image";s:4:"name";s:5:"image";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:11:"save_format";s:3:"url";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:3:"row";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:15:{s:3:"key";s:19:"field_56c3a3403d6b0";s:5:"label";s:15:"Section 1 Video";s:4:"name";s:15:"section_1_video";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}i:4;a:14:{s:3:"key";s:19:"field_56c4ac43aaf2f";s:5:"label";s:15:"Section 1 Blurb";s:4:"name";s:15:"section_1_blurb";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}i:5;a:14:{s:3:"key";s:19:"field_56c4dedc91575";s:5:"label";s:8:"Officers";s:4:"name";s:8:"officers";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:10:"sub_fields";a:4:{i:0;a:12:{s:3:"key";s:19:"field_56c4deef91576";s:5:"label";s:5:"Photo";s:4:"name";s:5:"photo";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:11:"save_format";s:3:"url";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_56c4df0991577";s:5:"label";s:8:"Position";s:4:"name";s:8:"position";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:15:{s:3:"key";s:19:"field_56c4df3a91578";s:5:"label";s:4:"Name";s:4:"name";s:4:"name";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:15:{s:3:"key";s:19:"field_56c4df4891579";s:5:"label";s:15:"Graduation Year";s:4:"name";s:15:"graduation_year";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}}s:7:"row_min";s:1:"5";s:9:"row_limit";s:1:"5";s:6:"layout";s:5:"table";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}i:6;a:15:{s:3:"key";s:19:"field_56cc8b4651ec1";s:5:"label";s:15:"Section 3 Title";s:4:"name";s:15:"section_3_title";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}i:7;a:14:{s:3:"key";s:19:"field_56cc8bc251ec4";s:5:"label";s:19:"Section 3 Paragraph";s:4:"name";s:19:"section_3_paragraph";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}i:8;a:15:{s:3:"key";s:19:"field_56d5ab776c590";s:5:"label";s:23:"Image Gallery Shortcode";s:4:"name";s:23:"image_gallery_shortcode";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}i:9;a:15:{s:3:"key";s:19:"field_56d0c7ae029b7";s:5:"label";s:13:"Where Are We?";s:4:"name";s:12:"where_are_we";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}}s:7:"row_min";s:1:"1";s:9:"row_limit";s:1:"1";s:6:"layout";s:3:"row";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
 (25, 14, 'position', 'normal'),
 (26, 14, 'layout', 'no_box'),
 (27, 14, 'hide_on_screen', 'a:14:{i:0;s:9:"permalink";i:1;s:11:"the_content";i:2;s:7:"excerpt";i:3;s:13:"custom_fields";i:4;s:10:"discussion";i:5;s:8:"comments";i:6;s:9:"revisions";i:7;s:4:"slug";i:8;s:6:"author";i:9;s:6:"format";i:10;s:14:"featured_image";i:11;s:10:"categories";i:12;s:4:"tags";i:13;s:15:"send-trackbacks";}'),
-(28, 14, '_edit_lock', '1456524083:1'),
+(28, 14, '_edit_lock', '1456843557:1'),
 (31, 15, 'homepage_content_0_menu_bar_title', 'Kappa Delta Rho @ Cornell University'),
 (32, 15, '_homepage_content_0_menu_bar_title', 'field_56bcfa889e8f6'),
 (33, 15, 'homepage_content', '1'),
@@ -805,10 +807,10 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (564, 80, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:207;s:6:"height";i:207;s:4:"file";s:18:"2016/02/kdr_WC.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"kdr_WC-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (565, 81, '_wp_attached_file', '2016/02/kdr_JT.png'),
 (566, 81, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:207;s:6:"height";i:207;s:4:"file";s:18:"2016/02/kdr_JT.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"kdr_JT-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(567, 82, '_wp_attached_file', '2016/02/kdr_Rush.png'),
-(568, 82, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:207;s:6:"height";i:207;s:4:"file";s:20:"2016/02/kdr_Rush.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"kdr_Rush-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(569, 83, '_wp_attached_file', '2016/02/kdr_ST.png');
+(567, 82, '_wp_attached_file', '2016/02/kdr_Rush.png');
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(568, 82, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:207;s:6:"height";i:207;s:4:"file";s:20:"2016/02/kdr_Rush.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"kdr_Rush-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(569, 83, '_wp_attached_file', '2016/02/kdr_ST.png'),
 (570, 83, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:207;s:6:"height";i:207;s:4:"file";s:18:"2016/02/kdr_ST.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"kdr_ST-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (571, 84, '_wp_attached_file', '2016/02/kdr_Weister.png'),
 (572, 84, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:207;s:6:"height";i:207;s:4:"file";s:23:"2016/02/kdr_Weister.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:23:"kdr_Weister-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
@@ -1170,7 +1172,6 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (931, 99, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:2048;s:6:"height";i:1243;s:4:"file";s:60:"2016/02/10265625_10152837798975715_9171391486348652021_o.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:60:"10265625_10152837798975715_9171391486348652021_o-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:60:"10265625_10152837798975715_9171391486348652021_o-300x182.jpg";s:5:"width";i:300;s:6:"height";i:182;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:60:"10265625_10152837798975715_9171391486348652021_o-901x547.jpg";s:5:"width";i:901;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:36:"Copyright 2014. All rights reserved.";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (932, 100, '_wp_attached_file', '2016/02/10612609_10153084297845715_4297879993501317760_n.jpg'),
 (933, 100, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:640;s:6:"height";i:640;s:4:"file";s:60:"2016/02/10612609_10153084297845715_4297879993501317760_n.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:60:"10612609_10153084297845715_4297879993501317760_n-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:60:"10612609_10153084297845715_4297879993501317760_n-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:60:"10612609_10153084297845715_4297879993501317760_n-547x547.jpg";s:5:"width";i:547;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(934, 14, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:1:"8";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
 (935, 101, 'homepage_content_0_hero_banner_barker_text', 'Kappa Delta Rho'),
 (936, 101, '_homepage_content_0_hero_banner_barker_text', 'field_56c3441783b7b'),
 (937, 101, 'homepage_content_0_hero_banner_barker_subtext', 'Beta Chapter'),
@@ -1269,14 +1270,109 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1030, 106, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:640;s:6:"height";i:640;s:4:"file";s:48:"2016/02/10598285_638326626288162_744227193_n.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:48:"10598285_638326626288162_744227193_n-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:48:"10598285_638326626288162_744227193_n-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:48:"10598285_638326626288162_744227193_n-547x547.jpg";s:5:"width";i:547;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (1031, 107, '_wp_attached_file', '2016/02/10958413_1535835120013318_1066027327_n.jpg'),
 (1032, 107, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:640;s:6:"height";i:640;s:4:"file";s:50:"2016/02/10958413_1535835120013318_1066027327_n.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:50:"10958413_1535835120013318_1066027327_n-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:50:"10958413_1535835120013318_1066027327_n-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:50:"10958413_1535835120013318_1066027327_n-547x547.jpg";s:5:"width";i:547;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(1033, 108, '_wp_attached_file', '2016/02/11280458_1604595836491784_1387721151_n.jpg'),
-(1034, 108, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:640;s:6:"height";i:640;s:4:"file";s:50:"2016/02/11280458_1604595836491784_1387721151_n.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:50:"11280458_1604595836491784_1387721151_n-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:50:"11280458_1604595836491784_1387721151_n-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:50:"11280458_1604595836491784_1387721151_n-547x547.jpg";s:5:"width";i:547;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
+(1033, 108, '_wp_attached_file', '2016/02/11280458_1604595836491784_1387721151_n.jpg');
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(1034, 108, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:640;s:6:"height";i:640;s:4:"file";s:50:"2016/02/11280458_1604595836491784_1387721151_n.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:50:"11280458_1604595836491784_1387721151_n-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:50:"11280458_1604595836491784_1387721151_n-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:50:"11280458_1604595836491784_1387721151_n-547x547.jpg";s:5:"width";i:547;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (1035, 109, '_wp_attached_file', '2016/02/11351636_883806158357422_697065999_n.jpg'),
 (1036, 109, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:640;s:6:"height";i:640;s:4:"file";s:48:"2016/02/11351636_883806158357422_697065999_n.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:48:"11351636_883806158357422_697065999_n-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:48:"11351636_883806158357422_697065999_n-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:48:"11351636_883806158357422_697065999_n-547x547.jpg";s:5:"width";i:547;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (1037, 110, '_wp_attached_file', '2016/02/10455361_10153007002750715_5980134499077744812_n-1.jpg'),
 (1038, 110, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:960;s:6:"height";i:720;s:4:"file";s:62:"2016/02/10455361_10153007002750715_5980134499077744812_n-1.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:62:"10455361_10153007002750715_5980134499077744812_n-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:62:"10455361_10153007002750715_5980134499077744812_n-1-300x225.jpg";s:5:"width";i:300;s:6:"height";i:225;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:62:"10455361_10153007002750715_5980134499077744812_n-1-729x547.jpg";s:5:"width";i:729;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(1041, 110, '_wp_attachment_image_alt', 'KDR 2014');
+(1041, 110, '_wp_attachment_image_alt', 'KDR 2014'),
+(1042, 112, '_wp_attached_file', '2016/03/IMG_6510.jpg'),
+(1043, 112, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1280;s:6:"height";i:853;s:4:"file";s:20:"2016/03/IMG_6510.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"IMG_6510-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:20:"IMG_6510-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:20:"IMG_6510-821x547.jpg";s:5:"width";i:821;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"4";s:6:"credit";s:0:"";s:6:"camera";s:20:"Canon EOS 5D Mark II";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1363977284";s:9:"copyright";s:0:"";s:12:"focal_length";s:2:"24";s:3:"iso";s:5:"12800";s:13:"shutter_speed";s:7:"0.00625";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}'),
+(1044, 113, '_wp_attached_file', '2016/03/IMG_6489.jpg'),
+(1045, 113, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1280;s:6:"height";i:853;s:4:"file";s:20:"2016/03/IMG_6489.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"IMG_6489-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:20:"IMG_6489-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:20:"IMG_6489-821x547.jpg";s:5:"width";i:821;s:6:"height";i:547;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"4";s:6:"credit";s:0:"";s:6:"camera";s:20:"Canon EOS 5D Mark II";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1363974070";s:9:"copyright";s:0:"";s:12:"focal_length";s:2:"24";s:3:"iso";s:5:"12800";s:13:"shutter_speed";s:7:"0.00625";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}'),
+(1046, 14, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:1:"8";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(1047, 114, 'homepage_content_0_hero_banner_barker_text', 'Kappa Delta Rho'),
+(1048, 114, '_homepage_content_0_hero_banner_barker_text', 'field_56c3441783b7b'),
+(1049, 114, 'homepage_content_0_hero_banner_barker_subtext', 'Beta Chapter'),
+(1050, 114, '_homepage_content_0_hero_banner_barker_subtext', 'field_56c3445b08452'),
+(1051, 114, 'homepage_content_0_hero_images_0_image', '74'),
+(1052, 114, '_homepage_content_0_hero_images_0_image', 'field_56c24128c5695'),
+(1053, 114, 'homepage_content_0_hero_images_1_image', '73'),
+(1054, 114, '_homepage_content_0_hero_images_1_image', 'field_56c24128c5695'),
+(1055, 114, 'homepage_content_0_hero_images_2_image', '72'),
+(1056, 114, '_homepage_content_0_hero_images_2_image', 'field_56c24128c5695'),
+(1057, 114, 'homepage_content_0_hero_images_3_image', '70'),
+(1058, 114, '_homepage_content_0_hero_images_3_image', 'field_56c24128c5695'),
+(1059, 114, 'homepage_content_0_hero_images_4_image', '71'),
+(1060, 114, '_homepage_content_0_hero_images_4_image', 'field_56c24128c5695'),
+(1061, 114, 'homepage_content_0_hero_images_5_image', '69'),
+(1062, 114, '_homepage_content_0_hero_images_5_image', 'field_56c24128c5695'),
+(1063, 114, 'homepage_content_0_hero_images_6_image', '67'),
+(1064, 114, '_homepage_content_0_hero_images_6_image', 'field_56c24128c5695'),
+(1065, 114, 'homepage_content_0_hero_images_7_image', '68'),
+(1066, 114, '_homepage_content_0_hero_images_7_image', 'field_56c24128c5695'),
+(1067, 114, 'homepage_content_0_hero_images_8_image', '66'),
+(1068, 114, '_homepage_content_0_hero_images_8_image', 'field_56c24128c5695'),
+(1069, 114, 'homepage_content_0_hero_images_9_image', '65'),
+(1070, 114, '_homepage_content_0_hero_images_9_image', 'field_56c24128c5695'),
+(1071, 114, 'homepage_content_0_hero_images_10_image', '63'),
+(1072, 114, '_homepage_content_0_hero_images_10_image', 'field_56c24128c5695'),
+(1073, 114, 'homepage_content_0_hero_images_11_image', '64'),
+(1074, 114, '_homepage_content_0_hero_images_11_image', 'field_56c24128c5695'),
+(1075, 114, 'homepage_content_0_hero_images_12_image', '62'),
+(1076, 114, '_homepage_content_0_hero_images_12_image', 'field_56c24128c5695'),
+(1077, 114, 'homepage_content_0_hero_images', '13'),
+(1078, 114, '_homepage_content_0_hero_images', 'field_56c2410ec5694'),
+(1079, 114, 'homepage_content_0_section_1_video', 'https://www.youtube.com/embed/NZihyOqy7aU'),
+(1080, 114, '_homepage_content_0_section_1_video', 'field_56c3a3403d6b0'),
+(1081, 114, 'homepage_content_0_section_1_blurb', 'Since 1913 the brothers of the Beta Chapter of Kappa Delta Rho have been upholding our motto of Honor Super Omnia at  Cornell University in Ithaca, NY. We are a group of talented, dedicated, and diverse men from all different backgrounds and all walks of life. Many of our brothers would have never considered joining a fraternity until they met members of Kappa Delta Rho. We pride ourselves on our involvement on the Cornell campus and in the Ithaca community.'),
+(1082, 114, '_homepage_content_0_section_1_blurb', 'field_56c4ac43aaf2f'),
+(1083, 114, 'homepage_content_0_officers_0_photo', '80'),
+(1084, 114, '_homepage_content_0_officers_0_photo', 'field_56c4deef91576'),
+(1085, 114, 'homepage_content_0_officers_0_position', 'Worthy Consul'),
+(1086, 114, '_homepage_content_0_officers_0_position', 'field_56c4df0991577'),
+(1087, 114, 'homepage_content_0_officers_0_name', 'Lorum Ipsum'),
+(1088, 114, '_homepage_content_0_officers_0_name', 'field_56c4df3a91578'),
+(1089, 114, 'homepage_content_0_officers_0_graduation_year', '2016'),
+(1090, 114, '_homepage_content_0_officers_0_graduation_year', 'field_56c4df4891579'),
+(1091, 114, 'homepage_content_0_officers_1_photo', '83'),
+(1092, 114, '_homepage_content_0_officers_1_photo', 'field_56c4deef91576'),
+(1093, 114, 'homepage_content_0_officers_1_position', 'Senior Tribune'),
+(1094, 114, '_homepage_content_0_officers_1_position', 'field_56c4df0991577'),
+(1095, 114, 'homepage_content_0_officers_1_name', 'Lorum Ipsum'),
+(1096, 114, '_homepage_content_0_officers_1_name', 'field_56c4df3a91578'),
+(1097, 114, 'homepage_content_0_officers_1_graduation_year', '2018'),
+(1098, 114, '_homepage_content_0_officers_1_graduation_year', 'field_56c4df4891579'),
+(1099, 114, 'homepage_content_0_officers_2_photo', '81'),
+(1100, 114, '_homepage_content_0_officers_2_photo', 'field_56c4deef91576'),
+(1101, 114, 'homepage_content_0_officers_2_position', 'Junior Tribune'),
+(1102, 114, '_homepage_content_0_officers_2_position', 'field_56c4df0991577'),
+(1103, 114, 'homepage_content_0_officers_2_name', 'Lorum Ipsum'),
+(1104, 114, '_homepage_content_0_officers_2_name', 'field_56c4df3a91578'),
+(1105, 114, 'homepage_content_0_officers_2_graduation_year', '2017'),
+(1106, 114, '_homepage_content_0_officers_2_graduation_year', 'field_56c4df4891579'),
+(1107, 114, 'homepage_content_0_officers_3_photo', '82'),
+(1108, 114, '_homepage_content_0_officers_3_photo', 'field_56c4deef91576'),
+(1109, 114, 'homepage_content_0_officers_3_position', 'Rush Chair'),
+(1110, 114, '_homepage_content_0_officers_3_position', 'field_56c4df0991577'),
+(1111, 114, 'homepage_content_0_officers_3_name', 'Lorum Ipsum'),
+(1112, 114, '_homepage_content_0_officers_3_name', 'field_56c4df3a91578'),
+(1113, 114, 'homepage_content_0_officers_3_graduation_year', '2018'),
+(1114, 114, '_homepage_content_0_officers_3_graduation_year', 'field_56c4df4891579'),
+(1115, 114, 'homepage_content_0_officers_4_photo', '84'),
+(1116, 114, '_homepage_content_0_officers_4_photo', 'field_56c4deef91576'),
+(1117, 114, 'homepage_content_0_officers_4_position', 'Quaestor'),
+(1118, 114, '_homepage_content_0_officers_4_position', 'field_56c4df0991577'),
+(1119, 114, 'homepage_content_0_officers_4_name', 'Lorum Ipsum'),
+(1120, 114, '_homepage_content_0_officers_4_name', 'field_56c4df3a91578'),
+(1121, 114, 'homepage_content_0_officers_4_graduation_year', '2017'),
+(1122, 114, '_homepage_content_0_officers_4_graduation_year', 'field_56c4df4891579'),
+(1123, 114, 'homepage_content_0_officers', '5'),
+(1124, 114, '_homepage_content_0_officers', 'field_56c4dedc91575'),
+(1125, 114, 'homepage_content_0_section_3_title', '&Kappa;&Delta;&Rho; Credo'),
+(1126, 114, '_homepage_content_0_section_3_title', 'field_56cc8b4651ec1'),
+(1127, 114, 'homepage_content_0_section_3_paragraph', 'The open motto of KDR is Honor Super Omnia, or Honor Above All Things. Simply put, this means that members of Kappa Delta Rho are men of honor and will strive to uphold that honor in every aspect of their life. We take our motto very seriously.'),
+(1128, 114, '_homepage_content_0_section_3_paragraph', 'field_56cc8bc251ec4'),
+(1129, 114, 'homepage_content_0_image_gallery_shortcode', '[mediatag name="homepage" size="large" class="gallery"]'),
+(1130, 114, '_homepage_content_0_image_gallery_shortcode', 'field_56d5ab776c590'),
+(1131, 114, 'homepage_content_0_where_are_we', '[om_gmap zoom="9" lat="42.457605" lng="-76.488908" infowindow=""]'),
+(1132, 114, '_homepage_content_0_where_are_we', 'field_56d0c7ae029b7'),
+(1133, 114, 'homepage_content', '1'),
+(1134, 114, '_homepage_content', 'field_56bcfa669e8f5'),
+(1135, 8, 'homepage_content_0_image_gallery_shortcode', '[mediatag name="homepage" size="large" class="gallery"]'),
+(1136, 8, '_homepage_content_0_image_gallery_shortcode', 'field_56d5ab776c590');
 
 -- --------------------------------------------------------
 
@@ -1285,7 +1381,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 --
 
 DROP TABLE IF EXISTS `wp_posts`;
-CREATE TABLE IF NOT EXISTS `wp_posts` (
+CREATE TABLE `wp_posts` (
   `ID` bigint(20) unsigned NOT NULL,
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1309,7 +1405,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Truncate table before insert `wp_posts`
@@ -1324,9 +1420,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (1, 1, '2016-02-10 18:09:15', '2016-02-10 18:09:15', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hello world!', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2016-02-10 18:09:15', '2016-02-10 18:09:15', '', 0, 'http://localhost:8888/?p=1', 0, 'post', '', 1),
 (4, 1, '2016-02-10 19:38:48', '2016-02-10 19:38:48', '', 'kdr_snap_shot copy', '', 'inherit', 'open', 'closed', '', 'kdr_snap_shot-copy', '', '', '2016-02-10 19:38:48', '2016-02-10 19:38:48', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/kdr_snap_shot-copy.png', 0, 'attachment', 'image/png', 0),
 (5, 1, '2016-02-10 19:39:00', '2016-02-10 19:39:00', '', 'cropped-kdr_snap_shot-copy.png', '', 'inherit', 'open', 'closed', '', 'cropped-kdr_snap_shot-copy-png', '', '', '2016-02-10 19:39:00', '2016-02-10 19:39:00', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/cropped-kdr_snap_shot-copy.png', 0, 'attachment', 'image/png', 0),
-(8, 1, '2016-02-11 21:09:11', '2016-02-11 21:09:11', '', 'Kappa Delta Rho @ Cornell University', '', 'publish', 'closed', 'closed', '', 'homepage', '', '', '2016-02-26 21:48:47', '2016-02-26 21:48:47', '', 0, 'http://localhost:8888/?page_id=8', 0, 'page', '', 0),
+(8, 1, '2016-02-11 21:09:11', '2016-02-11 21:09:11', '', 'Kappa Delta Rho @ Cornell University', '', 'publish', 'closed', 'closed', '', 'homepage', '', '', '2016-03-01 14:48:34', '2016-03-01 14:48:34', '', 0, 'http://localhost:8888/?page_id=8', 0, 'page', '', 0),
 (9, 1, '2016-02-11 21:09:11', '2016-02-11 21:09:11', '', 'Homepage', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-02-11 21:09:11', '2016-02-11 21:09:11', '', 8, 'http://localhost:8888/2016/02/11/8-revision-v1/', 0, 'revision', '', 0),
-(14, 1, '2016-02-11 21:44:51', '2016-02-11 21:44:51', '', 'Homepage - Content', '', 'publish', 'closed', 'closed', '', 'acf_homepage-content', '', '', '2016-02-26 21:46:59', '2016-02-26 21:46:59', '', 0, 'http://localhost:8888/?post_type=acf&#038;p=14', 0, 'acf', '', 0),
+(14, 1, '2016-02-11 21:44:51', '2016-02-11 21:44:51', '', 'Homepage - Content', '', 'publish', 'closed', 'closed', '', 'acf_homepage-content', '', '', '2016-03-01 14:47:38', '2016-03-01 14:47:38', '', 0, 'http://localhost:8888/?post_type=acf&#038;p=14', 0, 'acf', '', 0),
 (15, 1, '2016-02-11 21:47:12', '2016-02-11 21:47:12', '', 'Homepage', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-02-11 21:47:12', '2016-02-11 21:47:12', '', 8, 'http://localhost:8888/2016/02/11/8-revision-v1/', 0, 'revision', '', 0),
 (16, 1, '2016-02-11 21:47:30', '2016-02-11 21:47:30', '', 'Kappa Delta Rho @ Cornell University', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-02-11 21:47:30', '2016-02-11 21:47:30', '', 8, 'http://localhost:8888/2016/02/11/8-revision-v1/', 0, 'revision', '', 0),
 (17, 1, '2016-02-11 22:12:34', '2016-02-11 22:12:34', '', 'Kappa Delta Rho @ Cornell University', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-02-11 22:12:34', '2016-02-11 22:12:34', '', 8, 'http://localhost:8888/2016/02/11/8-revision-v1/', 0, 'revision', '', 0),
@@ -1389,27 +1485,30 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (87, 1, '2016-02-23 16:47:34', '2016-02-23 16:47:34', '', 'Kappa Delta Rho @ Cornell University', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-02-23 16:47:34', '2016-02-23 16:47:34', '', 8, 'http://localhost:8888/2016/02/23/8-revision-v1/', 0, 'revision', '', 0),
 (88, 1, '2016-02-23 16:49:26', '2016-02-23 16:49:26', '', 'Kappa Delta Rho @ Cornell University', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-02-23 16:49:26', '2016-02-23 16:49:26', '', 8, 'http://localhost:8888/2016/02/23/8-revision-v1/', 0, 'revision', '', 0),
 (89, 1, '2016-02-23 16:49:45', '2016-02-23 16:49:45', '', 'Kappa Delta Rho @ Cornell University', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-02-23 16:49:45', '2016-02-23 16:49:45', '', 8, 'http://localhost:8888/2016/02/23/8-revision-v1/', 0, 'revision', '', 0),
-(90, 1, '2016-02-23 19:35:39', '2016-02-23 19:35:39', '', 'Sledding 2014', '', 'inherit', 'open', 'closed', '', '13941429579_d3c018881f_o', '', '', '2016-02-29 21:24:29', '2016-02-29 21:24:29', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/13941429579_d3c018881f_o.jpg', 0, 'attachment', 'image/jpeg', 0),
-(91, 1, '2016-02-23 19:35:42', '2016-02-23 19:35:42', '', 'Graduation 15', '', 'inherit', 'open', 'closed', '', 'img_0401', '', '', '2016-02-29 21:24:07', '2016-02-29 21:24:07', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/IMG_0401.png', 0, 'attachment', 'image/png', 0),
-(92, 1, '2016-02-23 19:36:13', '2016-02-23 19:36:13', '', '', '', 'inherit', 'open', 'closed', '', 'img_7388', '', '', '2016-02-29 21:24:01', '2016-02-29 21:24:01', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/IMG_7388.jpg', 0, 'attachment', 'image/jpeg', 0),
-(93, 1, '2016-02-23 19:36:18', '2016-02-23 19:36:18', '', '', '', 'inherit', 'open', 'closed', '', 'img_7449', '', '', '2016-02-29 21:23:57', '2016-02-29 21:23:57', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/IMG_7449.jpg', 0, 'attachment', 'image/jpeg', 0),
-(94, 1, '2016-02-23 19:36:22', '2016-02-23 19:36:22', '', '', '', 'inherit', 'open', 'closed', '', 'img_7454', '', '', '2016-02-29 21:23:53', '2016-02-29 21:23:53', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/IMG_7454.jpg', 0, 'attachment', 'image/jpeg', 0),
-(95, 1, '2016-02-23 19:36:57', '2016-02-23 19:36:57', '', 'Retreat 2014', '', 'inherit', 'open', 'closed', '', '883891_10152811377770715_7676415503438276155_o', '', '', '2016-02-29 21:23:47', '2016-02-29 21:23:47', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/883891_10152811377770715_7676415503438276155_o.jpg', 0, 'attachment', 'image/jpeg', 0),
-(96, 1, '2016-02-23 19:36:58', '2016-02-23 19:36:58', '', 'Broomball 2014', '', 'inherit', 'open', 'closed', '', 'dsc_0260', '', '', '2016-02-29 21:23:35', '2016-02-29 21:23:35', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/DSC_0260.jpg', 0, 'attachment', 'image/jpeg', 0),
+(90, 1, '2016-02-23 19:35:39', '2016-02-23 19:35:39', '', 'Sledding 2014', '', 'inherit', 'open', 'closed', '', '13941429579_d3c018881f_o', '', '', '2016-03-01 14:31:16', '2016-03-01 14:31:16', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/13941429579_d3c018881f_o.jpg', 0, 'attachment', 'image/jpeg', 0),
+(91, 1, '2016-02-23 19:35:42', '2016-02-23 19:35:42', '', 'Graduation 15', '', 'inherit', 'open', 'closed', '', 'img_0401', '', '', '2016-03-01 14:31:14', '2016-03-01 14:31:14', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/IMG_0401.png', 0, 'attachment', 'image/png', 0),
+(92, 1, '2016-02-23 19:36:13', '2016-02-23 19:36:13', '', 'IMG_7388', '', 'inherit', 'open', 'closed', '', 'img_7388', '', '', '2016-03-01 14:31:11', '2016-03-01 14:31:11', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/IMG_7388.jpg', 0, 'attachment', 'image/jpeg', 0),
+(93, 1, '2016-02-23 19:36:18', '2016-02-23 19:36:18', '', 'IMG_7449', '', 'inherit', 'open', 'closed', '', 'img_7449', '', '', '2016-03-01 14:31:09', '2016-03-01 14:31:09', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/IMG_7449.jpg', 0, 'attachment', 'image/jpeg', 0),
+(94, 1, '2016-02-23 19:36:22', '2016-02-23 19:36:22', '', 'IMG_7454', '', 'inherit', 'open', 'closed', '', 'img_7454', '', '', '2016-03-01 14:31:06', '2016-03-01 14:31:06', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/IMG_7454.jpg', 0, 'attachment', 'image/jpeg', 0),
+(95, 1, '2016-02-23 19:36:57', '2016-02-23 19:36:57', '', 'Retreat 2014', '', 'inherit', 'open', 'closed', '', '883891_10152811377770715_7676415503438276155_o', '', '', '2016-03-01 14:31:04', '2016-03-01 14:31:04', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/883891_10152811377770715_7676415503438276155_o.jpg', 0, 'attachment', 'image/jpeg', 0),
+(96, 1, '2016-02-23 19:36:58', '2016-02-23 19:36:58', '', 'Broomball 2014', '', 'inherit', 'open', 'closed', '', 'dsc_0260', '', '', '2016-03-01 14:31:01', '2016-03-01 14:31:01', '', 27, 'http://localhost:8888/wp-content/uploads/2016/02/DSC_0260.jpg', 0, 'attachment', 'image/jpeg', 0),
 (97, 1, '2016-02-23 19:37:13', '2016-02-23 19:37:13', '<img class="alignnone size-medium wp-image-90" src="http://localhost:8888/wp-content/uploads/2016/02/13941429579_d3c018881f_o-300x200.jpg" alt="13941429579_d3c018881f_o" width="300" height="200" /> <img class="alignnone size-medium wp-image-91" src="http://localhost:8888/wp-content/uploads/2016/02/IMG_0401-300x200.png" alt="IMG_0401" width="300" height="200" /> <img class="alignnone size-medium wp-image-92" src="http://localhost:8888/wp-content/uploads/2016/02/IMG_7388-300x200.jpg" alt="IMG_7388" width="300" height="200" /> <img class="alignnone size-medium wp-image-96" src="http://localhost:8888/wp-content/uploads/2016/02/DSC_0260-300x199.jpg" alt="DSC_0260" width="300" height="199" /><img class="alignnone size-medium wp-image-93" src="http://localhost:8888/wp-content/uploads/2016/02/IMG_7449-300x200.jpg" alt="IMG_7449" width="300" height="200" /> <img class="alignnone size-medium wp-image-94" src="http://localhost:8888/wp-content/uploads/2016/02/IMG_7454-300x200.jpg" alt="IMG_7454" width="300" height="200" /> <img class="alignnone size-medium wp-image-95" src="http://localhost:8888/wp-content/uploads/2016/02/883891_10152811377770715_7676415503438276155_o-300x200.jpg" alt="883891_10152811377770715_7676415503438276155_o" width="300" height="200" />', 'Photos', '', 'inherit', 'closed', 'closed', '', '27-revision-v1', '', '', '2016-02-23 19:37:13', '2016-02-23 19:37:13', '', 27, 'http://localhost:8888/2016/02/23/27-revision-v1/', 0, 'revision', '', 0),
-(98, 1, '2016-02-26 21:32:00', '2016-02-26 21:32:00', '', '', '', 'inherit', 'open', 'closed', '', '10455361_10153007002750715_5980134499077744812_n', '', '', '2016-02-29 21:23:21', '2016-02-29 21:23:21', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10455361_10153007002750715_5980134499077744812_n.jpg', 0, 'attachment', 'image/jpeg', 0),
-(99, 1, '2016-02-26 21:32:01', '2016-02-26 21:32:01', '', 'Red Rose Formal', '', 'inherit', 'open', 'closed', '', '10265625_10152837798975715_9171391486348652021_o', '', '', '2016-02-29 21:21:03', '2016-02-29 21:21:03', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10265625_10152837798975715_9171391486348652021_o.jpg', 0, 'attachment', 'image/jpeg', 0),
-(100, 1, '2016-02-26 21:32:02', '2016-02-26 21:32:02', '', 'Work Project 2014', '', 'inherit', 'open', 'closed', '', '10612609_10153084297845715_4297879993501317760_n', '', '', '2016-02-29 21:20:55', '2016-02-29 21:20:55', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10612609_10153084297845715_4297879993501317760_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(98, 1, '2016-02-26 21:32:00', '2016-02-26 21:32:00', '', '10455361_10153007002750715_5980134499077744812_n', '', 'inherit', 'open', 'closed', '', '10455361_10153007002750715_5980134499077744812_n', '', '', '2016-03-01 14:30:59', '2016-03-01 14:30:59', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10455361_10153007002750715_5980134499077744812_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(99, 1, '2016-02-26 21:32:01', '2016-02-26 21:32:01', '', 'Red Rose Formal', '', 'inherit', 'open', 'closed', '', '10265625_10152837798975715_9171391486348652021_o', '', '', '2016-03-01 14:30:57', '2016-03-01 14:30:57', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10265625_10152837798975715_9171391486348652021_o.jpg', 0, 'attachment', 'image/jpeg', 0),
+(100, 1, '2016-02-26 21:32:02', '2016-02-26 21:32:02', '', 'Work Project 2014', '', 'inherit', 'open', 'closed', '', '10612609_10153084297845715_4297879993501317760_n', '', '', '2016-03-01 14:30:54', '2016-03-01 14:30:54', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10612609_10153084297845715_4297879993501317760_n.jpg', 0, 'attachment', 'image/jpeg', 0),
 (101, 1, '2016-02-26 21:48:47', '2016-02-26 21:48:47', '', 'Kappa Delta Rho @ Cornell University', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-02-26 21:48:47', '2016-02-26 21:48:47', '', 8, 'http://localhost:8888/2016/02/26/8-revision-v1/', 0, 'revision', '', 0),
 (102, 1, '2016-02-29 17:10:35', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-02-29 17:10:35', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/?p=102', 0, 'post', '', 0),
-(103, 1, '2016-02-29 18:42:58', '2016-02-29 18:42:58', '', 'Welcome Home', '', 'inherit', 'open', 'closed', '', '1663151_603435679710909_631992374_n', '', '', '2016-02-29 21:20:13', '2016-02-29 21:20:13', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/1663151_603435679710909_631992374_n.jpg', 0, 'attachment', 'image/jpeg', 0),
-(104, 1, '2016-02-29 18:42:58', '2016-02-29 18:42:58', '', 'Big & Little', '', 'inherit', 'open', 'closed', '', '926093_345465335592086_808468357_n', '', '', '2016-02-29 21:20:22', '2016-02-29 21:20:22', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/926093_345465335592086_808468357_n.jpg', 0, 'attachment', 'image/jpeg', 0),
-(105, 1, '2016-02-29 18:42:59', '2016-02-29 18:42:59', '', 'Pool Table', '', 'inherit', 'open', 'closed', '', '10269015_284664805041671_120621740_n', '', '', '2016-02-29 21:19:31', '2016-02-29 21:19:31', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10269015_284664805041671_120621740_n.jpg', 0, 'attachment', 'image/jpeg', 0),
-(106, 1, '2016-02-29 18:43:00', '2016-02-29 18:43:00', '', '&Kappa;&Delta;&Rho;', '', 'inherit', 'open', 'closed', '', '10598285_638326626288162_744227193_n', '', '', '2016-02-29 21:19:03', '2016-02-29 21:19:03', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10598285_638326626288162_744227193_n.jpg', 0, 'attachment', 'image/jpeg', 0),
-(107, 1, '2016-02-29 18:43:00', '2016-02-29 18:43:00', '', 'The House', '', 'inherit', 'open', 'closed', '', '10958413_1535835120013318_1066027327_n', '', '', '2016-02-29 21:19:23', '2016-02-29 21:19:23', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10958413_1535835120013318_1066027327_n.jpg', 0, 'attachment', 'image/jpeg', 0),
-(108, 1, '2016-02-29 18:43:01', '2016-02-29 18:43:01', '', 'Graduation ''15', '', 'inherit', 'open', 'closed', '', '11280458_1604595836491784_1387721151_n', '', '', '2016-02-29 21:18:33', '2016-02-29 21:18:33', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/11280458_1604595836491784_1387721151_n.jpg', 0, 'attachment', 'image/jpeg', 0),
-(109, 1, '2016-02-29 18:43:01', '2016-02-29 18:43:01', '', 'Bonefire', '', 'inherit', 'open', 'closed', '', '11351636_883806158357422_697065999_n', '', '', '2016-02-29 20:19:31', '2016-02-29 20:19:31', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/11351636_883806158357422_697065999_n.jpg', 0, 'attachment', 'image/jpeg', 0),
-(110, 1, '2016-02-29 18:43:02', '2016-02-29 18:43:02', '', 'KDR 2014', '', 'inherit', 'open', 'closed', '', '10455361_10153007002750715_5980134499077744812_n-2', '', '', '2016-02-29 20:20:53', '2016-02-29 20:20:53', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10455361_10153007002750715_5980134499077744812_n-1.jpg', 0, 'attachment', 'image/jpeg', 0);
+(103, 1, '2016-02-29 18:42:58', '2016-02-29 18:42:58', '', 'Welcome Home', '', 'inherit', 'open', 'closed', '', '1663151_603435679710909_631992374_n', '', '', '2016-03-01 14:30:50', '2016-03-01 14:30:50', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/1663151_603435679710909_631992374_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(104, 1, '2016-02-29 18:42:58', '2016-02-29 18:42:58', '', 'Big & Little', '', 'inherit', 'open', 'closed', '', '926093_345465335592086_808468357_n', '', '', '2016-03-01 14:30:52', '2016-03-01 14:30:52', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/926093_345465335592086_808468357_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(105, 1, '2016-02-29 18:42:59', '2016-02-29 18:42:59', '', 'Pool Table', '', 'inherit', 'open', 'closed', '', '10269015_284664805041671_120621740_n', '', '', '2016-03-01 14:30:48', '2016-03-01 14:30:48', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10269015_284664805041671_120621740_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(106, 1, '2016-02-29 18:43:00', '2016-02-29 18:43:00', '', '&Kappa;&Delta;&Rho;', '', 'inherit', 'open', 'closed', '', '10598285_638326626288162_744227193_n', '', '', '2016-03-01 14:30:43', '2016-03-01 14:30:43', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10598285_638326626288162_744227193_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(107, 1, '2016-02-29 18:43:00', '2016-02-29 18:43:00', '', 'The House', '', 'inherit', 'open', 'closed', '', '10958413_1535835120013318_1066027327_n', '', '', '2016-03-01 14:30:45', '2016-03-01 14:30:45', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10958413_1535835120013318_1066027327_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(108, 1, '2016-02-29 18:43:01', '2016-02-29 18:43:01', '', 'Graduation ''15', '', 'inherit', 'open', 'closed', '', '11280458_1604595836491784_1387721151_n', '', '', '2016-03-01 14:30:38', '2016-03-01 14:30:38', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/11280458_1604595836491784_1387721151_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(109, 1, '2016-02-29 18:43:01', '2016-02-29 18:43:01', '', 'Bonefire', '', 'inherit', 'open', 'closed', '', '11351636_883806158357422_697065999_n', '', '', '2016-03-01 14:30:41', '2016-03-01 14:30:41', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/11351636_883806158357422_697065999_n.jpg', 0, 'attachment', 'image/jpeg', 0),
+(110, 1, '2016-02-29 18:43:02', '2016-02-29 18:43:02', '', 'KDR 2014', '', 'inherit', 'open', 'closed', '', '10455361_10153007002750715_5980134499077744812_n-2', '', '', '2016-03-01 14:30:34', '2016-03-01 14:30:34', '', 0, 'http://localhost:8888/wp-content/uploads/2016/02/10455361_10153007002750715_5980134499077744812_n-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(112, 1, '2016-03-01 14:29:06', '2016-03-01 14:29:06', '', 'IMG_6510', '', 'inherit', 'open', 'closed', '', 'img_6510', '', '', '2016-03-01 14:30:31', '2016-03-01 14:30:31', '', 0, 'http://localhost:8888/wp-content/uploads/2016/03/IMG_6510.jpg', 0, 'attachment', 'image/jpeg', 0),
+(113, 1, '2016-03-01 14:29:12', '2016-03-01 14:29:12', '', 'IMG_6489', '', 'inherit', 'open', 'closed', '', 'img_6489', '', '', '2016-03-01 14:30:29', '2016-03-01 14:30:29', '', 0, 'http://localhost:8888/wp-content/uploads/2016/03/IMG_6489.jpg', 0, 'attachment', 'image/jpeg', 0),
+(114, 1, '2016-03-01 14:48:34', '2016-03-01 14:48:34', '', 'Kappa Delta Rho @ Cornell University', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-03-01 14:48:34', '2016-03-01 14:48:34', '', 8, 'http://localhost:8888/2016/03/01/8-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1418,7 +1517,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 --
 
 DROP TABLE IF EXISTS `wp_termmeta`;
-CREATE TABLE IF NOT EXISTS `wp_termmeta` (
+CREATE TABLE `wp_termmeta` (
   `meta_id` bigint(20) unsigned NOT NULL,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -1437,12 +1536,12 @@ TRUNCATE TABLE `wp_termmeta`;
 --
 
 DROP TABLE IF EXISTS `wp_terms`;
-CREATE TABLE IF NOT EXISTS `wp_terms` (
+CREATE TABLE `wp_terms` (
   `term_id` bigint(20) unsigned NOT NULL,
   `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `term_group` bigint(10) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Truncate table before insert `wp_terms`
@@ -1457,7 +1556,8 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 (1, 'Uncategorized', 'uncategorized', 0),
 (2, 'header_menu', 'header_menu', 0),
 (3, 'Image Gallery', 'image_gallery', 0),
-(4, 'Image Gallery', 'image_gallery', 0);
+(4, 'Image Gallery', 'image_gallery', 0),
+(5, 'homepage', 'homepage', 0);
 
 -- --------------------------------------------------------
 
@@ -1466,7 +1566,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 --
 
 DROP TABLE IF EXISTS `wp_term_relationships`;
-CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
+CREATE TABLE `wp_term_relationships` (
   `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `term_order` int(11) NOT NULL DEFAULT '0'
@@ -1493,30 +1593,32 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (44, 2, 0),
 (48, 2, 0),
 (90, 3, 0),
-(90, 4, 0),
+(90, 5, 0),
 (91, 3, 0),
-(91, 4, 0),
+(91, 5, 0),
 (92, 3, 0),
-(92, 4, 0),
+(92, 5, 0),
 (93, 3, 0),
-(93, 4, 0),
+(93, 5, 0),
 (94, 3, 0),
-(94, 4, 0),
+(94, 5, 0),
 (95, 3, 0),
-(95, 4, 0),
+(95, 5, 0),
 (96, 3, 0),
-(96, 4, 0),
-(98, 4, 0),
-(99, 4, 0),
-(100, 4, 0),
-(103, 4, 0),
-(104, 4, 0),
-(105, 4, 0),
-(106, 4, 0),
-(107, 4, 0),
-(108, 4, 0),
-(109, 4, 0),
-(110, 4, 0);
+(96, 5, 0),
+(98, 5, 0),
+(99, 5, 0),
+(100, 5, 0),
+(103, 5, 0),
+(104, 5, 0),
+(105, 5, 0),
+(106, 5, 0),
+(107, 5, 0),
+(108, 5, 0),
+(109, 5, 0),
+(110, 5, 0),
+(112, 5, 0),
+(113, 5, 0);
 
 -- --------------------------------------------------------
 
@@ -1525,14 +1627,14 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 --
 
 DROP TABLE IF EXISTS `wp_term_taxonomy`;
-CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
+CREATE TABLE `wp_term_taxonomy` (
   `term_taxonomy_id` bigint(20) unsigned NOT NULL,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `taxonomy` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `parent` bigint(20) unsigned NOT NULL DEFAULT '0',
   `count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Truncate table before insert `wp_term_taxonomy`
@@ -1547,7 +1649,8 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 (1, 1, 'category', '', 0, 1),
 (2, 2, 'nav_menu', '', 0, 9),
 (3, 3, 'media_category', '', 0, 7),
-(4, 4, 'media_tag', '', 0, 7);
+(4, 4, 'media_tag', '', 0, 0),
+(5, 5, 'media_tag', '', 0, 7);
 
 -- --------------------------------------------------------
 
@@ -1556,7 +1659,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 --
 
 DROP TABLE IF EXISTS `wp_usermeta`;
-CREATE TABLE IF NOT EXISTS `wp_usermeta` (
+CREATE TABLE `wp_usermeta` (
   `umeta_id` bigint(20) unsigned NOT NULL,
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -1601,7 +1704,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 --
 
 DROP TABLE IF EXISTS `wp_users`;
-CREATE TABLE IF NOT EXISTS `wp_users` (
+CREATE TABLE `wp_users` (
   `ID` bigint(20) unsigned NOT NULL,
   `user_login` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `user_pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -1751,17 +1854,17 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=358;
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=365;
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1042;
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1137;
 --
 -- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=112;
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=115;
 --
 -- AUTO_INCREMENT for table `wp_termmeta`
 --
@@ -1771,12 +1874,12 @@ ALTER TABLE `wp_termmeta`
 -- AUTO_INCREMENT for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
-  MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
-  MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `wp_usermeta`
 --

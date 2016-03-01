@@ -847,16 +847,19 @@ section.section2 .white_crest .exec_board h3 {
 
 /* line 1, ../sass/_section3.scss */
 section.section3 {
+  @import url(https://fonts.googleapis.com/css?family=Ubuntu&subset=greek,latin);
   font-family: 'open_sanssemibold';
 }
-/* line 4, ../sass/_section3.scss */
+/* line 5, ../sass/_section3.scss */
 section.section3 h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
   text-align: center;
   letter-spacing: 1px;
   font-size: 28px;
   padding: 40px 0 20px 0;
 }
-/* line 11, ../sass/_section3.scss */
+/* line 14, ../sass/_section3.scss */
 section.section3 p {
   font-family: 'open_sansregular';
   font-size: 20px;
@@ -926,17 +929,25 @@ section.section4 .gallery .grid-item figcaption {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
+  -moz-transition: opacity 0.15s ease;
+  -o-transition: opacity 0.15s ease;
+  -webkit-transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease;
   position: relative;
 }
-/* line 53, ../sass/_section4.scss */
+/* line 54, ../sass/_section4.scss */
 section.section4 .gallery .grid-item figcaption:hover {
   cursor: pointer;
   background-color: #ff8f00;
   opacity: 0.75;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
   filter: alpha(opacity=75);
+  -moz-transition: opacity 0.15s ease;
+  -o-transition: opacity 0.15s ease;
+  -webkit-transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease;
 }
-/* line 59, ../sass/_section4.scss */
+/* line 61, ../sass/_section4.scss */
 section.section4 .gallery .grid-item figcaption span {
   font-family: 'open_sansregular';
   color: white;
@@ -944,37 +955,37 @@ section.section4 .gallery .grid-item figcaption span {
   font-size: 30px;
   text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.65);
 }
-/* line 68, ../sass/_section4.scss */
+/* line 70, ../sass/_section4.scss */
 section.section4 .gallery .grid-item.grid-item--h2 {
   height: 436px;
   width: 220px;
 }
-/* line 72, ../sass/_section4.scss */
+/* line 74, ../sass/_section4.scss */
 section.section4 .gallery .grid-item.grid-item--h2 figcaption span {
   top: 46%;
 }
-/* line 74, ../sass/_section4.scss */
+/* line 76, ../sass/_section4.scss */
 section.section4 .gallery .grid-item.grid-item--n {
   width: 220px;
 }
-/* line 77, ../sass/_section4.scss */
+/* line 79, ../sass/_section4.scss */
 section.section4 .gallery .grid-item.grid-item--n figcaption span {
   top: 37%;
 }
-/* line 80, ../sass/_section4.scss */
+/* line 82, ../sass/_section4.scss */
 section.section4 .gallery .grid-item.grid-item--w2 {
   width: 446px;
 }
-/* line 82, ../sass/_section4.scss */
+/* line 84, ../sass/_section4.scss */
 section.section4 .gallery .grid-item.grid-item--w2 figcaption span {
   top: 43%;
 }
-/* line 84, ../sass/_section4.scss */
+/* line 86, ../sass/_section4.scss */
 section.section4 .gallery .grid-item.grid-item--x2 {
   width: 446px;
   height: 436px;
 }
-/* line 87, ../sass/_section4.scss */
+/* line 89, ../sass/_section4.scss */
 section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
   top: 47%;
 }
@@ -995,7 +1006,7 @@ section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
   section.section4 {
     height: 2200px;
   }
-  /* line 100, ../sass/_section4.scss */
+  /* line 102, ../sass/_section4.scss */
   section.section4 .gallery .grid-item.grid-item--h2,
   section.section4 .gallery .grid-item.grid-item--n,
   section.section4 .gallery .grid-item.grid-item--w2,
@@ -1003,7 +1014,7 @@ section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
     height: 220px;
     width: 220px;
   }
-  /* line 105, ../sass/_section4.scss */
+  /* line 107, ../sass/_section4.scss */
   section.section4 .gallery .grid-item.grid-item--h2 figcaption span,
   section.section4 .gallery .grid-item.grid-item--n figcaption span,
   section.section4 .gallery .grid-item.grid-item--w2 figcaption span,
@@ -1016,7 +1027,7 @@ section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
   section.section4 {
     height: 5310px;
   }
-  /* line 112, ../sass/_section4.scss */
+  /* line 114, ../sass/_section4.scss */
   section.section4 .gallery .grid-item.grid-item--h2,
   section.section4 .gallery .grid-item.grid-item--n,
   section.section4 .gallery .grid-item.grid-item--w2,
@@ -1024,7 +1035,7 @@ section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
     height: 280px;
     width: 280px;
   }
-  /* line 117, ../sass/_section4.scss */
+  /* line 119, ../sass/_section4.scss */
   section.section4 .gallery .grid-item.grid-item--h2 figcaption span,
   section.section4 .gallery .grid-item.grid-item--n figcaption span,
   section.section4 .gallery .grid-item.grid-item--w2 figcaption span,
@@ -1033,11 +1044,11 @@ section.section4 .gallery .grid-item.grid-item--x2 figcaption span {
   }
 }
 @media screen and (max-width: 360px) {
-  /* line 124, ../sass/_section4.scss */
+  /* line 126, ../sass/_section4.scss */
   section.section4 .gallery {
     width: 280px;
   }
-  /* line 125, ../sass/_section4.scss */
+  /* line 127, ../sass/_section4.scss */
   section.section4 .gallery .grid-item.grid-item--h2,
   section.section4 .gallery .grid-item.grid-item--n,
   section.section4 .gallery .grid-item.grid-item--w2,

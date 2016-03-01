@@ -12,6 +12,9 @@
  * @package kdr_beta
  */
 
+include_once 'template-parts/photo-gallery-templates.php';
+$gallery_template = new PhotoGalleryTemplate();
+
 $fields = array(
 	'herobanner_images'		=> 'hero_images',
 	'herobanner_text' 		=> 'hero_banner_barker_text',
@@ -21,6 +24,7 @@ $fields = array(
 	'officers'				=> 'officers',
 	'section3_text'			=> 'section_3_title',
 	'section3_paragraph'	=> 'section_3_paragraph',
+	'gallery'				=> 'image_gallery_shortcode',
 	'map'					=> 'where_are_we'
 );
 foreach ( $fields as $key => $val):
@@ -103,11 +107,11 @@ get_header('homepage'); ?>
 					<div class="gallery grid">
 						<h2>Gallery</h2>
 					<?php 
-						$grid_items = ['h2','n','w2','n','x2','w2','n','n','n','w2','n','w2','x2','n','h2','n','n','n'];
-						$image_urls = corrected_homepage_image_gallery(do_shortcode('[mediatag name="image_gallery" size="large" class="gallery"]'));
-						foreach($grid_items as $index => $grid_type):
+						$hompage_grid_template = $gallery_template->getTemplate('homepage');
+
+						$image_urls = corrected_homepage_image_gallery(do_shortcode($gallery));
+						foreach($hompage_grid_template as $index => $grid_type):
 							$image = $image_urls[$index];
-							// $image_url = array_shift($image_urls);	
 					?>
 						<figure 
 							class="grid-item grid-item--<?php echo($grid_type); ?>"
@@ -126,17 +130,14 @@ get_header('homepage'); ?>
 			</section>
 
 			<section class="section5">
-				<?php do_shortcode($map);?>
+
+
+				<?php
+					do_shortcode($map);
+				?>
 			</section>
 <?php
 get_footer();
-
-
-
-
-
-
-
 
 
 
