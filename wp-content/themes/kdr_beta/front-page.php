@@ -33,7 +33,6 @@ endforeach;
 
 $rand_num = rand(0, sizeOf($herobanner_images)-1);
 $rand_img = $herobanner_images[$rand_num]['image'];
-
 get_header('homepage'); ?>
 
 
@@ -130,11 +129,11 @@ get_header('homepage'); ?>
 			</section>
 
 			<section class="section5">
+				<div class="map_wrapper">
+					<?php echo $map; ?>
+				</div>
 
 
-				<?php
-					do_shortcode($map);
-				?>
 			</section>
 <?php
 get_footer();
