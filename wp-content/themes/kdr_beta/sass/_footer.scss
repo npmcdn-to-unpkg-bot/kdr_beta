@@ -2,7 +2,7 @@ $sectionPadding: 40px;
 
 .site-footer{
 	font-family:'open_sansregular', sans-serif;
-	height:450px;
+	height:400px;
 	background-color:$navy;
 	padding:$sectionPadding 0;
 
@@ -16,7 +16,6 @@ $sectionPadding: 40px;
 	}
 
 	.menu-wrapper{
-		width:1120px;
 		margin:0 auto;
 		display:flex;
 		justify-content:space-between;
@@ -33,9 +32,7 @@ $sectionPadding: 40px;
 	}
 
 	.footer-menu{
-	    display: inline-block;
-	    vertical-align:top;
-	    padding:0 5%;
+
 		ul{
 			list-style:none;
 			margin:0;
@@ -50,11 +47,13 @@ $sectionPadding: 40px;
 					font-size: 12px;
 
 					&:hover{
-					color:$princeton;
-				}
+						color:$princeton;
+					}
 				}
 			}
 		}
+
+	
 	}
 
 	.copyright{
@@ -77,4 +76,42 @@ $sectionPadding: 40px;
 			}
 		}
 	}
+
+	@media #{$_560px} {
+		.footer-menu-header{
+			font-size:12px;
+		}
+		.footer-menu{
+			&.menu-2,&.menu-3,&.menu-4{
+				padding: 0 5px;
+			}		
+		}
+	}
+
+		@media #{$xsmall} {
+			.footer-menu ul li a{
+				font-size:10px;
+			}
+
+			.footer-menu{
+				&.menu-2,&.menu-3,&.menu-4{
+					padding: 0 3px;
+				}		
+			}
+
+		}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

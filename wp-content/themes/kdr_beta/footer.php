@@ -13,7 +13,7 @@
 
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper">
+		<div class="wrapper page-wrapper">
 			<figure>
 				<img src="<?php echo(get_template_directory_uri() . '/images/whitecrest.png'); ?>" alt="crest" />
 			</figure>
