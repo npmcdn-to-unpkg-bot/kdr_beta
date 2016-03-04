@@ -161,6 +161,53 @@ function corrected_homepage_image_gallery($shortcode_result){
 	return $images_array;
 }
 
+function getMenuParentList($menu){
+	$parents = [];
+	foreach($menu as $index=>$item):
+		$parentID = (intval($item->menu_item_parent) > 0) ? intval($item->menu_item_parent) : null;
+		if(!is_null($parentID)){
+			array_push($parents, $parentID);
+		}
+	endforeach;
+	$parents = array_unique($parents);
+	$hierarchy;
+	foreach($parents as $parent):
+		$children = [];
+		$title = '';
+		foreach($menu as $index=>$submenu):
+			if(intval($submenu->ID) === $parent){
+				$title = $submenu->title;
+				unset($menu[$index]);
+			}
+			elseif(intval($submenu->menu_item_parent) === $parent){
+				array_push($children,$submenu); 
+				unset($menu[$index]);
+			}
+		endforeach;
+		$hierarchy[$title] = $children;
+	endforeach;
+	return $hierarchy;
+}
+
+function getSubMenuItems($menu, $parents){
+	$submenu = [];
+	foreach($parents as $parent):
+		foreach($menu as $index=>$object):
+			if(intval($object->menu_item_parent) === $parent):
+				print($object->title . " ");
+				array_push($submenu, $object);
+				unset($menu[$index]);
+			endif;
+		endforeach;
+		print("<br />");
+	endforeach;
+	
+
+	// var_dump($submenu);
+}
+
+
+
 
 
 /**
