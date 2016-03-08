@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<a class="logo" href="/"><?php echo(get_the_title()); ?></a>
+		<a class="logo" href="/">Kappa Delta Rho @ Cornell University</a>
 		<div class="menu">
 			<?php 
 				wp_nav_menu(array( 

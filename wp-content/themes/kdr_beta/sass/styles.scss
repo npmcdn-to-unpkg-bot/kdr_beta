@@ -15,25 +15,25 @@ body,html{
 	margin:0 auto;
 
 	@media #{$xlarge} {
-		width:960px;
+		width:944px;
 	}
 	@media #{$large} {
-		width:768px;
+		width:752px;
 	}
 	@media #{$medium} {
-		width:680px;
+		width:663px;
 	}
 	@media #{$xmedium} {
-		width:560px;
+		width:545px;
 	}
 	@media #{$_560px} {
-		width:480px;
+		width:464px;
 	}
 	@media #{$small} {
-		width: 360px;
+		width: 345px;
 	}
 	@media #{$xsmall} {
-		width: 320px;
+		width: 305px;
 	}
 }
 
